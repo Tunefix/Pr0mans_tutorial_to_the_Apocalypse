@@ -5,10 +5,13 @@
 \usepackage{setspace}
 \usepackage{enumitem}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\graphicspath{ {./img/} }
 
-\renewcommand{\rmdefault}{cmtt}
-\renewcommand{\sfdefault}{cmtt}
-\renewcommand{\ttdefault}{cmtt}
+\renewcommand{\rmdefault}{lmtt}
+\renewcommand{\sfdefault}{lmtt}
+\renewcommand{\ttdefault}{lmtt}
 
 \renewcommand*\footnoterule{}
 
@@ -30,14 +33,12 @@
 \setlength{\parskip}{0.5em}
 \renewcommand{\baselinestretch}{1.15}
 
-\clubpenalty = 10000
-\widowpenalty = 10000
-\displaywidowpenalty = 10000
+\renewcommand{\labelitemi}{$-$}
  
 \titleformat
 {\chapter} % command
 [hang] % shape
-{\bfseries\huge} % format
+{\huge} % format
 {} % label
 {0ex} % sep
 {\hspace{-0.4pt}\thechapter\hspace{0.6em}} % before-code
@@ -46,19 +47,19 @@
 \titleformat
 {\section} % command
 [hang] % shape
-{\bfseries\rmfamily\Large} % format
+{\LARGE} % format
 {} % label
 {0ex} % sep
 {\hspace{-0.4pt}\thesection\hspace{0.6em}} % before-code
 [] % after-code
 
-\titleformat{\subsection}[hang]{\bfseries\rmfamily\normalsize}{}{0em}
+\titleformat{\subsection}[hang]{\Large}{}{0em}
 {\hspace{-0.4pt}\thesubsection\hspace{0.6em}}[]
 
-\titleformat{\subsubsection}[hang]{\bfseries\rmfamily\normalsize}{}{0em}
+\titleformat{\subsubsection}[hang]{\large}{}{0em}
 {\hspace{-0.4pt}\thesubsubsection\hspace{0.6em}}[]
 
-\titleformat{\paragraph}[hang]{\bfseries\small}{}{0em}{}[]
+\titleformat{\paragraph}[hang]{\bfseries\normalsize}{}{0em}{}[]
 
 \titlespacing{\chapter}{0em}{0.5em}{0em}{}
 \titlespacing{\section}{0em}{0.5em}{0em}{}
@@ -68,6 +69,7 @@
 
 
 \begin{document}
+
 
 \vspace*{3cm}
 \begin{center}
@@ -81,7 +83,7 @@ Pr0mans\\
 
 \tableofcontents
 
-
+\raggedright
 \chapter{Introduction}
  
 Since the C:DDA-Discord grows each day, the community constantly raises beginners' questions regarding the start of a new game so I've decided to put out a (hopefully) comprehensive manual to Cataclysm: Dark Days Ahead, that will cover most of the things encountered in the game. This Text will, over the course of the creation, cover all the basic things: Character creation, The base game and it's most important controls, guides to the various stages of the game (played by me on basic settings) as well as several parts of the games' explanation in-depth.
@@ -98,6 +100,7 @@ Since Cataclysm: Dark Days Ahead is an ASCII Game (a complex one at that), the c
  
 Movement is done either by using the keyboard's numeric keyPad, with each of the buttons representing one of the 8 directions and [5] being the vvvvvvvvvvvvvvvvvvvv option. There is also the option of using a different control layout using the right side of the keyboard, yet this is probably more difficult to use.
 
+\includegraphics{01}
 
 Buttons of interest:
 
@@ -160,14 +163,14 @@ City Spacing - [0 to 8] -> This setting in turn is an indicator for how close ci
 
 Spawn Rate Scaling Factor [0.00 to 50.00] -> Sets the amount of monster spawning, a value of 0 would deactivate spawning all together, while a value of 2 would effectively double the amount of monsters. Small changes can already have a huge impact on monster density inside a town, especially when paired with Wanders Spawns: On.
 
-Carrion Spawn Rate scaling factor [0% to 1000%] -> Sets the value at how often (and therefore how quick) critters spawn out of rotten edibles, a value of 0% disables this mechanic all together.
+Carrion Spawn Rate scaling factor [0\% to 1000\%] -> Sets the value at how often (and therefore how quick) critters spawn out of rotten edibles, a value of 0\% disables this mechanic all together.
 
 Item Spawn scaling factor [0.01 to 10.00] -> Sets the amount of items found in certain locations. This does not impact monster drop tables and is only meant to influence how many items are spawned in any given spot.
 NPC Spawn Rate scaling factor [0 to 100.00] -> sets the density and thereby the chance of an NPC spawning in on the edge of your reality bubble (more on that in chapter 5.3.10). This does only influence randomly spawned in NPCs, not static NPCs. If you wish to encounter NPCs on a regular basis, set this value to 1 - 1.5, for the odd encounter maybe 0.5
 
 Monster Evolution scaling factor [0.00 to 100] -> sets the time required for a monster to spawn 1 evolution category higher than it normally would have. 0 disables evolution of monsters, a higher number means more days need to pass for evolution to occur. If you have trouble with high-power zombies, increase this value, other than that, decrease it - I'd suggest going with 15-30
 
-Monster Speed/Resilience [1% to 1000%] -> This multiplies both the internal speed and HP that each monster is spawned with. A lower number means the monsters are gonna be slower and take less hits to kill, while a higher number will make them tougher and faster respectively.
+Monster Speed/Resilience [1\% to 1000\%] -> This multiplies both the internal speed and HP that each monster is spawned with. A lower number means the monsters are gonna be slower and take less hits to kill, while a higher number will make them tougher and faster respectively.
 
 Default region type [default] -> This feature is not yet implemented, but planned to be able to switch to different regions to play in, like deserts.
 
@@ -200,7 +203,7 @@ Not only is this question difficult to answer, as every person has different pre
 
 I'd suggest you don't tweak any of the Zombie modifying values (Speed/resilience/Classic/Surrounded) until you deem it necessary - while this makes for a more challenging game overall in terms of enemy variety, you will miss a lot of the games' content. Wander Spawns should either be set to on or off according to taste - I personally enjoy the extra challenge of having to deal with noise and hordes roaming around the map, though it makes clearing a city significantly more difficult. As stated earlier, I highly advise against using wander spawns if you are a newcomer to this game, as the amount of zombies that will be in towns can quite easily overwhelm you. Same goes for experimental Z-Levels, having to be careful with sound and light, even across Z-Levels makes for a great challenge on managing your survival as you can't just hide out in a basement, go to sleep in order to heal up damage you have taken, go back out again and attack. Hordes that are chasing you will actively chase after you over multiple levels, which means you can potentially trap yourself by thinking a basement or upstairs on a building is safe.
 
-Settings you can safely modify would be: Zombie Spawn Rate (set it to 1.00 or lower if deemed necessary), carrion spawn rate (either disable it by setting it to 0 or leave it at 100%) Item spawn rate I�d actually suggest bumping up to 1.25 or 1.5, while this makes the early game substantially easier to deal with, limitless frustration makes the game experience less enjoyable to begin with. Reducing this setting at a certain skill level, to not get handed everything right from the get-go makes for great runs later down the line. Static NPCs should be enabled, as it will populate some of the buildings you come across, otherwise those will be completely empty to begin with, namely the Refugee Center.
+Settings you can safely modify would be: Zombie Spawn Rate (set it to 1.00 or lower if deemed necessary), carrion spawn rate (either disable it by setting it to 0 or leave it at 100\%) Item spawn rate I'd actually suggest bumping up to 1.25 or 1.5, while this makes the early game substantially easier to deal with, limitless frustration makes the game experience less enjoyable to begin with. Reducing this setting at a certain skill level, to not get handed everything right from the get-go makes for great runs later down the line. Static NPCs should be enabled, as it will populate some of the buildings you come across, otherwise those will be completely empty to begin with, namely the Refugee Center.
 I'd suggest against playing with random NPCs, as they are currently horrendously unbalanced and can spawn with extremely high skills and if that NPC is considering you to be a threat, he might decide to put you out of your misery. If you want an experience like DayZ, except fun, go for it and bump up the NPC spawn rate to 0.25 first, increasing it as you see fit, but don't come crying that I didn't warn you.
 Season length should be around 30, maybe even lower so you can see the effects of the appropriate seasons to the surrounding world. As this changes ambient temperature as well as what you can forage in the wilds, quicker times means more dynamics. While you will enter difficult seasons earlier, they will also pass earlier, requiring a lower stockpile.
 
@@ -276,11 +279,11 @@ Fast Healer (2 Points) - You heal damage done to your body more quickly by sleep
 
 Fast Learner (3 Points) - This will make all practically earned experiences raise your skills quicker. For the amount of points it costs, the effect it has is quite low. This does exclude knowledge gained from books, has however great application when training combat focused skills, as those will rise quicker, which makes for an easier life all around by quickly gaining combat related skill levels.
 
-Quick (3 Points) - This makes you 10% quicker in every aspect. From walking/running, to attacking, eating and whatnot. If you require that extra bit of performance from your character and have the points to spare, this is a great pick.
+Quick (3 Points) - This makes you 10\% quicker in every aspect. From walking/running, to attacking, eating and whatnot. If you require that extra bit of performance from your character and have the points to spare, this is a great pick.
 
 Fast Reader (1 Point) - Reading books that will provide you will extra skills far quicker than getting into fist-fights all the time? Definitely a nice pick if you want to learn most of your skills from books. Remember though, for combat related skills - books only get you so far as there are no end-game books for combat skills by design. The reading time on some late game books however might just make this trait worth the single point.
 
-Fleet-Footed (2 Points) - Feeling a bit slow in comparison to the undead? Grab this perk to be 15% quicker while on sure footing, which relates to all things you don't require to balance upon, like boulders, railings, rubble and wreckages.
+Fleet-Footed (2 Points) - Feeling a bit slow in comparison to the undead? Grab this perk to be 15\% quicker while on sure footing, which relates to all things you don't require to balance upon, like boulders, railings, rubble and wreckages.
 
 High Adrenaline (2 Points) - This perk is more of a double-edged sword than one would believe. In tense combat moments you will gain the Adrenaline Rush effect, which boosts your Str, Dex and Per, as well as numbing pain a bit, while giving you great stamina recovery. However, once it wears off it leaves you pretty vulnerable as it does reduce your stats for a time. Take at your own risk - the power boost may save your bacon.
 
@@ -294,7 +297,7 @@ https://discourse.cataclysmdda.org/t/best-unarmed-styles-for-early-game/15558/11
 
 Night Vision (2 Points) - In my opinion an absolutely mandatory pick for any survivor out there. What this trait allows for is taking your perception and giving you 1 tile of vision for each 3 points in Perception while in complete darkness. This trait will NOT however allow you to do crafting that requires you to see or reading.
 
-Packmule (2 points) - This perk will raise your volume capacity by 40%. This does not include weight, which is covered by Strong Back (35% more carry weight). This makes the most use out of all your pockets if you wish to travel in light gear and without a Backpack to keep your encumbrance low (more on encumbrance in chapter 4.2.2 - Temperature and Clothing) and is a definite pick for those that either wish to carry around some utility gear while also being clothed sparingly, or for the absolute hoarder that runs without a shopping cart.
+Packmule (2 points) - This perk will raise your volume capacity by 40\%. This does not include weight, which is covered by Strong Back (35\% more carry weight). This makes the most use out of all your pockets if you wish to travel in light gear and without a Backpack to keep your encumbrance low (more on encumbrance in chapter 4.2.2 - Temperature and Clothing) and is a definite pick for those that either wish to carry around some utility gear while also being clothed sparingly, or for the absolute hoarder that runs without a shopping cart.
 
 Parkour Expert (2 Points) - Removes or lowers the movement penalty when moving through tiles that would slow you down. Railings, windows, bushes, grass, you name it. This allows you to widen the gap between you and monsters more easily. Makes for a great way of escaping, as well as a nice way to kite monsters into tiles that would slow them down, giving you more time to strike them
 
@@ -336,7 +339,7 @@ Self-Aware (-1 Point) - While this perk allows you to better gauge your general 
 
 Outdoorsman (-1 Point) - while being wet carries a nasty debuff, it is also clearable by carrying a towel and using that to dry yourself off from said rain or wearing protective gear like a raincoat + hood for extended periods of work. Considering that staying wet makes it easy to catch the flu/cold, forgetting to do so after a day in the rain seems more negative than positive.
 
-Tough (-2 Points) - Extra 20% HP on all your body parts? Where do you sign up? Probably nowhere - You might be wondering, why wouldn't you take a perk that just straight-up increases HP? Because missing HP is rarely what kills you, but being in pain is.
+Tough (-2 Points) - Extra 20\% HP on all your body parts? Where do you sign up? Probably nowhere - You might be wondering, why wouldn't you take a perk that just straight-up increases HP? Because missing HP is rarely what kills you, but being in pain is.
 
 Negative:
 The intolerance traits (+1 or +2 Points each) - Food may be common in some of your runs, other times however, food can be extremely scarce. Limiting your potential food intake because of the negatives of food that you don't tolerate (-50 Mood penalty of each eaten unit, stacking) is not worth the small amount of points gained. There is an argument to be made by coupling this with the positive trait 'Strong Stomach' though. So take at your own risk.
@@ -345,7 +348,7 @@ Illiterate (+6 Points) - Books are not only a nice way of raising your skills to
 
 Schizophrenic (+2 Points) - While you only see illusory effects and weird messages pop up when the schizophrenic attack strikes, which can be quite funny, at some point it may turn more annoying than fun. Besides, running into a basement because you want to wait out said Schizophrenic strike only to assume that zombie hulk downstairs to be fake, can be a quick way to get smeared across the floor. The medication for it can also be rare from time to time, and is, as far as I know, not craftable, therefore you are going to run out eventually, making this perk pretty much an easter egg hunt of death.
 
-Languorous (+2 Points) - Stamina runs out quickly, either due to combat, or due to you running away from something that wants to eat your face. Mouth encumbrance does already increase stamina costs for actions substantially and reduces regeneration of stamina, further reducing your max stamina by 25% seems not worth the 2 points.
+Languorous (+2 Points) - Stamina runs out quickly, either due to combat, or due to you running away from something that wants to eat your face. Mouth encumbrance does already increase stamina costs for actions substantially and reduces regeneration of stamina, further reducing your max stamina by 25\% seems not worth the 2 points.
 
 Fast Metabolism/High Thirst (+2 points each) - If you struggle while just starting out, making it harder for you to get drinkable water or edible food is not going to enlighten your experience. You can pick these later if you know what you are doing, or if you start in summer, where food inside the forest is plentiful. Remember that you will be burning through your stocks quicker though.
 Besides, these two Perks lead to nasty negative mutation lines as well, if you were to pick them for the extra points, so keep that in mind.
@@ -374,8 +377,8 @@ reduced penalty to operating ranged weaponry (works in tandem with Perception an
 (Side-note: More Dex makes tasks that require finesse easier: What this entails is that lockpicking and safecracking work better and prying a window has a lower chance of breaking it. Also reduces the chance of a weapon taking damage on strike)
 
 Intelligence (Int): Smart bimmy-o-james is smart. Intelligence turns out to be an extremely important thing to have in the apocalypse. While most of the effects are not really apparent at a glance, it does help you out quietly in the background, with the following benefits for each point:
--5% reading time (per operation)
--3.5% skill rust rate (rounded up)
+-5\% reading time (per operation)
+-3.5\% skill rust rate (rounded up)
 A Crafting bonus, which is not all too easily quantifiable.
 Easier interactions with NPC's.
 Less failure chance on bionic installation.
@@ -403,13 +406,13 @@ Archery: This skill allows you to have an easier time to aim with all weapons th
 
 Bartering: This skill is pretty much unnecessary if you decide to play without NPC's enabled, and even if they are, trading is hardly worth the effort. NPC's carry around junk most of the time, which barely makes this a viable skill to pick up, or to even develop. It raises by trading with NPC's. What does it do exactly? It checks against the NPCs bartering skill to calculate the definitive price of an item you wish to trade.
 
-Bashing Weapons: Each rank of bashing weapons increases damage done with weapons that deal BASH damage by 8%, in addition it increases your odds of landing an attack with blunt weapons. If you consider using bashing weapons, make sure to increase this skill to at least 2, if not more. It raises by using weapons that deal BASH damage.
+Bashing Weapons: Each rank of bashing weapons increases damage done with weapons that deal BASH damage by 8\%, in addition it increases your odds of landing an attack with blunt weapons. If you consider using bashing weapons, make sure to increase this skill to at least 2, if not more. It raises by using weapons that deal BASH damage.
 
 Computers: All skills terminal are found here. The higher your skill, the easier time you have bypassing security measures which are are found on terminals. Breaking into a bank vault is surely made easier by having this skill around, but again, not a viable pickup for a start. It raises naturally by using terminals and trying to hack them.
 
 Cooking: If you want to eat, you gotta cook it first - barely anything is edible raw, so cooking is a surprisingly important skill in cataclysm. While earlier ranks allow you to just prepare simple foods, later ranks allow for not only cooking fancy dishes, but also to preserve your raw food materials into long-lasting stocks. It raises by crafting anything that requires cooking skill.
 
-Cutting Weapons: each point in cutting weapons increases damage dealt with cutting weapons by 8%, as well as giving you armor penetration and a higher to-hit chance. If you intend on going at your enemy with swords, axes and the likes, this is the skill for you. However, as those weapons are somewhat limited early on, I'd refrain from using it as your startout weapon skill - even the crude sword that is craftable barely deals enough damage. It increases while using weapons that deal CUT damage.
+Cutting Weapons: each point in cutting weapons increases damage dealt with cutting weapons by 8\%, as well as giving you armor penetration and a higher to-hit chance. If you intend on going at your enemy with swords, axes and the likes, this is the skill for you. However, as those weapons are somewhat limited early on, I'd refrain from using it as your startout weapon skill - even the crude sword that is craftable barely deals enough damage. It increases while using weapons that deal CUT damage.
 
 Dodging: each point in dodging gives you a higher dodge rating(modified by encumbrance and dex). The better it is, the higher chance you have to dodge an enemy, depending on his melee to-hit bonus. While it takes some effort to be solely reliant on dodging to avoid damage taken, increasing this to 2 is no harm and helps dodging the occasional hit here or there. It is raised by dodging (un-) successfully in combat.
 
@@ -431,7 +434,7 @@ Mechanics: You want that car to run? Better be knowledgeable at mechanics. From 
 
 Melee: your skill in proper close combat, regardless of weapon (or lack thereof). Increasing your melee skill makes for a significant increase to your hit chance on any swing. This skill raises, obviously, by swinging at enemies.
 
-Piercing Weapons: everything sharp and pointy belongs in this category. From the steak knife to spears, all of those are considered to be piercing weapons. As with the other combat related skills, increasing piercing weapons increases your damage slightly (6%), but as an added benefit it also increases your armor-piercing significantly (10%). Piercing damage is inherently armor-piercing, so it only gets better and better. Many consider piercing weapons to be the strongest out there, due to the extra range spears offer. For the sake of this guide, we assume that you'll use spears, as they are easy to make and to maintain.
+Piercing Weapons: everything sharp and pointy belongs in this category. From the steak knife to spears, all of those are considered to be piercing weapons. As with the other combat related skills, increasing piercing weapons increases your damage slightly (6\%), but as an added benefit it also increases your armor-piercing significantly (10\%). Piercing damage is inherently armor-piercing, so it only gets better and better. Many consider piercing weapons to be the strongest out there, due to the extra range spears offer. For the sake of this guide, we assume that you'll use spears, as they are easy to make and to maintain.
 
 Rifles: From a simple pipe rifle up to Anti-Tank rifles, all those pew pew sticks are listed under rifles. Crossbows are also considered a rifle in this game. Again, having this skill improves ranged capabilities at long range and allows for crafting and the application of mods to said weapons. As rifles are somewhat slow to aim, having decent skill to engage in long-range combat seems to be more of a factor for rifles than for most other firearms.
 
@@ -459,6 +462,7 @@ Since we have 6+0+2 points to spare, let us start by getting our attributes out 
 
 All of a sudden, we have 5 points left to work on our skill set that we'll be bringing with us. Since we want to survive nasty combat, let's go with one point into Dodging, two points into Melee and Piercing Weapons respectively, raising those to 2, 3 and 3.
 
+\includegraphics{02}
 
 This would be how our character looks on the finalization screen. So let's hop into the world' is what I'd usually say, but we have some dry stuff regarding the games' story to cover in the next chapter. Don't worry, it's brief.
 
@@ -471,11 +475,13 @@ The best part of the story? Nobody really knows what's going on (not even the de
 
 Once you pop into the game, you are assaulted by either a weird look of symbols, or a weird look of things barely resembling a crude depiction of the world.
 
+\includegraphics[width=\textwidth]{03}
 
 Woah, who turned off the tileset?
 
 Well, that was me, to give you a general idea of how the game looked in its' original form (which is honestly quite good, especially if you have enough imagination to fill out the blanks, ASCII is something I can always recommend.) if you however press [Esc] to bring up the quick menu, go to Options (or press 2) then cycle to Graphics (lol) using the [TAB] key and scroll down to the "Use Tileset" option, you can and should turn that on. Directly after you can also set up your favorite tileset to be used. I personally use the MSX++LIVE\_PEOPLE Tileset, which is a Fork of MShock, which got forked and improved several times and turned out to be one of the best tilesets so far.
 
+\includegraphics[width=\textwidth]{04}
 
 Ahh, way better, at least you can now determine what's what at a glance. But what's with all that stuff on the left and right side of the game window? The left side might be somewhat self-explanatory, being that you can tell what is located where. On the other hand, the right side seems so cluttered that you are flat-out bombarded with information.
 
@@ -581,7 +587,7 @@ Nevertheless, let's take it from the top, you could say each piece of clothing h
 
 -Body part(s) it is worn on
 -warmth provided to that body part
--%-Coverage of the body part(s)
+-\%-Coverage of the body part(s)
 -Layer it is worn on
 -encumbrance to body part(s)
 -armor values provided to equipped-on body part(s)
@@ -594,15 +600,15 @@ The body part(s) a piece of clothing is worn on - this is pretty self explanator
 
 -Every piece of clothing comes with a warmth value to it that it will apply to the body part that it is worn on. If your clothing piece covers multiple body parts this value is applied to each body piece at the full value. On the note of that, most of the clothing follows logical values when it comes to its' material. Fur is, for the amount of material used, warmer than leather, which in turn is warmer than cloth.
 
-The % coverage of the body parts it is worn on - The effect of which is really important.
-The potentially most important effect later down the line is the effect it has on armor values applying. Think of it like this - If you have a piece of clothing that would provide you with 20 CUT and BASH armor, but has 50% coverage, that basically means that half the attacks have to be calculated against this armor value, while the other half goes past it unhindered. Makes you look at that piece of clothing a bit more carefully right? With all of that in mind, how are you ever gonna survive in your street threads considering they only provide so much warmth and only cover up so much? Well, this is where'
+The \% coverage of the body parts it is worn on - The effect of which is really important.
+The potentially most important effect later down the line is the effect it has on armor values applying. Think of it like this - If you have a piece of clothing that would provide you with 20 CUT and BASH armor, but has 50\% coverage, that basically means that half the attacks have to be calculated against this armor value, while the other half goes past it unhindered. Makes you look at that piece of clothing a bit more carefully right? With all of that in mind, how are you ever gonna survive in your street threads considering they only provide so much warmth and only cover up so much? Well, this is where'
 
 Layers come in handy - each piece of clothing is not only assigned to a body part, but also to a layer it is worn upon.
 There are 4 layers (technically 5)on a body part: Close - belted - Normal - Outer - Strapped
 
 To quickly clarify - belted, or rather 'worn around your waist', as it is called in the game, refers to, well, belts and tools that can be worn on belts via loops. Considering tool belts and the likes are therefore unique to the rule of clothing when it comes to their layering, as they can only ever cover one layer, I just wanted to mention it since you hardly come across a reason to wear more than 1 belt, as they only have so many uses.
 
-Without suffering penalties, you can wear 1 piece of clothing on each layer for each body part. What the layers do to you specifically is pretty simple - for warmth, they add up all the warmth values to that body part. So while outside temperatures could be at a rating of -20 (temperature for the character's feelings' sake is measured on a range, while temperature also exists as a proper scaled unit in Fahrenheit or Celsius, right now, the rating matters) for a naked character, having clothing on each layer with a warmth of 10 (and for the sake of simplicity, 100% coverage) would put you at a +20 rating, which is pretty comfortable. Going over this would be considered warm, hot etc.
+Without suffering penalties, you can wear 1 piece of clothing on each layer for each body part. What the layers do to you specifically is pretty simple - for warmth, they add up all the warmth values to that body part. So while outside temperatures could be at a rating of -20 (temperature for the character's feelings' sake is measured on a range, while temperature also exists as a proper scaled unit in Fahrenheit or Celsius, right now, the rating matters) for a naked character, having clothing on each layer with a warmth of 10 (and for the sake of simplicity, 100\% coverage) would put you at a +20 rating, which is pretty comfortable. Going over this would be considered warm, hot etc.
 On the note of high temperatures it should be stated that there is no way to reduce the ambient temperature. While you might think that this is not that big of a deal, since, hell, when are you ever gonna be close to a fire, remember that in order to reduce the felt temperature, you have to unequip gear and you only wear so much. If you were to stand close to a burning building for example, all the different Fire tiles generate lots of heat. While this seems minor, the effect that this can have on you can be extreme. There are no limits on how cold or hot an area can be, with several fire tiles stuck close to each other, being near a burning building can quickly raise your felt temperature to a point that will endanger your life, as hot temperatures can have just as negative an effect on speed as cold ones, while also damaging your affected body parts. Sooner rather than later you will have the feelings down for how much clothing you require in the appropriate seasons as well as day times. Usually, the more is better, except for the clothings' negatives'
 
 Encumbrance, or how difficult it is to move in your clothing. Again, layering helps, as you are suffering no penalties for wearing 1 piece of clothing for each layer of a body part. Each piece of clothing makes movement more difficult in a certain way, as each body part has a different negative while being encumbered:
@@ -619,7 +625,7 @@ Mouth:
 -decreases yelling volume
 
 Torso:
--negative 1% melee to hit per point of encumbrance
+-negative 1\% melee to hit per point of encumbrance
 -melee swings cost +1 movement point per encumbrance
 -negative 0.1 dodge skill per point of encumbrance
 -swimming Encumbrance Lvl /10 * (80 - Swimming Skill Lvl * 3)
@@ -643,7 +649,7 @@ Basically - the more you wear, the less freely you can move, which, in combat, c
 
 Armor values on gear are what is between you and the zombie that is trying to maul you and use your skull as a muesli bowl. Armor is separated into the following damage types: CUT, BASH, ACID, FIRE, ENVIRONMENTAL. The more it has, the better protected the body part is, makes sense right?
 
-Yes and no, again, coverage is king on the matter of BASH and CUT. Since %-Coverage determines if a hit done to you will be reduced by your respective armor values, or bypassing it in its entirety. This will be checked for each layer that you wear when a body part is attacked. So it may be worthwhile to stack up on as much armor as possible for each body part, right? No, have you not payed attention yet? Armor that is fully covering and has great protective values will most likely encumber you to hell and back, making you nothing short of a sitting duck, ready to be ripped apart. It is a fine balancing line that you need to find for yourself, how many pieces of armor and clothing you require to not be too encumbered whilst also being protected enough to not just straight-up get killed in close combat.
+Yes and no, again, coverage is king on the matter of BASH and CUT. Since \%-Coverage determines if a hit done to you will be reduced by your respective armor values, or bypassing it in its entirety. This will be checked for each layer that you wear when a body part is attacked. So it may be worthwhile to stack up on as much armor as possible for each body part, right? No, have you not payed attention yet? Armor that is fully covering and has great protective values will most likely encumber you to hell and back, making you nothing short of a sitting duck, ready to be ripped apart. It is a fine balancing line that you need to find for yourself, how many pieces of armor and clothing you require to not be too encumbered whilst also being protected enough to not just straight-up get killed in close combat.
 
 But what about the other values? Well, Acid protection means that you are able to withstand attacks that would be considered corrosive and that will deal relatively quick damage to the hit body part. You will quickly, and potentially painfully learn to avoid these kinds of attacks once you get into actual contact with them while unprotected. But how does it actually work?
 
@@ -1198,14 +1204,16 @@ If you are looking for a more sophisticated Cheat Sheet as to what you should do
 
 Just as a reference, for writing these guides, as well as a guideline, I am going to start out using my beginner character earlier presented in this book in a standard world with Wander Spawns enabled:
 
-
+\includegraphics[width=\textwidth]{06}
 
 For personal preference you are more than welcome to swap out anything you like, but I feel that from a combat-standpoint, this character can hold his own well, while also taking a weapon choice that is pretty good to start out with - though may be a bit annoying to craft unless you specifically head for it first.
 
 
-\section{8.1 The Early Game}
+\section{The Early Game}
 
 So, we spawn into the world with our character, prepared to get our ass handed to us. First of all, let's check the map by pressing [m] - we need to assess the situation and see what should be the priorities:
+
+\includegraphics[width=\textwidth]{07}
 
 As we can see, we spawned close to forests and swamps, which are intertwined with forest trails and relatively close to two cities, with some interesting structures in them - namely two libraries are visible.
 
@@ -1222,10 +1230,18 @@ The basement however, contained nothing at all, so, to secure water there are se
 
 And just a couple steps to the north, right outside my shelter I already spot something:
 
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{08}
+\end{center}
+
 A kreck, not too difficult, but could at least damage my gear, however - and this is the important bit, where there are extra dimensional beings, there's loot to be had.
 
 However, seems like there's more than just a Kreck, instead, a Mi-Go is right behind it. This is most definitely a fight I am not willing to risk. Those things hit hard, quite fast and you most likely will be unable to outrun them - that loot will have to wait.
 So for now, let's head east instead, towards the swamp and see what we find - OH FUCK ME. A second Mi-Go.
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{09}
+\end{center}
 
 And while that may mean more loot, it means more places I need to tread extremely carefully, otherwise this run will end extremely quickly.
 
@@ -1239,6 +1255,8 @@ So in order for my vegetables and eggs to not rot away, I store them in the cell
 On the other hand, I did manage to find some Rhubarb while foraging, this is totally fine to eat raw and comes with a nice bonus to our health stat (+3 each bite). That Trailhead [brown T] on the overmap might be worthwhile checking, as I spotted a car there'
 
 Yup, there's a car there, a nice Pickup truck - lacks wheels though (and has a faulty engine, but nothing too bad), and on the radar I spot something next to it that looks like an RV.
+
+\includegraphics[width=\textwidth]{10}
 
 Actually a meth lab, with a functioning chemistry lab. But it has no battery whatsoever inside, so no easy cooking for me. Guess it's up to more foraging and hoping for the best, as this is the only thing I can do now that I'm this beat up.
 
@@ -1254,6 +1272,10 @@ Now with both water and food achieved, time to work on my gear, which means, I w
 
 Time to work on some clothing, as what we currently wear is' well, less than optimal:
 
+\begin{center}
+\includegraphics[width=0.5\textwidth]{11}
+\end{center}
+
 Yeah, that requires some work. good thing we made that needle and the bandages, with tailoring 1, we should have a somewhat easier time getting some gear up and running. So we grind our tailoring to 2 using pairs of light gloves (or any other recipe, it's all up to you) and at rank 2 we should definitely  make a long underwear top since that is close to the skin and therefore a great piece of clothing to wear as well as a balaclava to increase head and mouth temperature.
 To grind further, I'd suggest using the T-shirt recipe, since that can also be disassembled instead of cut up, returning the full crafting resources.
 Pr0-Tip: if you fail a couple of crafts, don't sweat it, the shelter has generally enough sheets to keep you outfitted for the first crafts that you do.
@@ -1264,6 +1286,9 @@ Pr0-Tip: Remember that most spear-type weapons can be [f]ired in order to perfor
 
 And on the start of day 3, this is how the clothing situation is now looking:
 
+\begin{center}
+\includegraphics[width=0.5\textwidth]{12}
+\end{center}
 
 Well, I'm pretty happy with how things turned out. And since we are now properly equipped it's time to go exploring (we traded in a bit of defense from the winter coat for way more pockets and less encumberment all around) The spear makes for a great weapon against basically anything, except the zombie Soldier, but this is simply due to its' low damage values.
 
@@ -1354,80 +1379,86 @@ While cleaning out the city I noticed some acidic soldier ants at the NW edge of
 
 So, you either skipped to this spot or decided to read through the entire Guide and are now interested in some quick tips for certain things. Or maybe you wonder if a question you might be asking yourself will be answered here? We shall see. For those wondering why absolute base questions pop up here, even though they have been answered - this is for those absolute beginners that want to experience the game on their own, but are wondering why certain things don't work out for them as they expect.
 
-Q: How to I raise (insert skill here) from (insert level here)?
-A: Either by finding books (unlikely to find the exact book you are looking for) or by performing the appropriate action. Combat skills raise naturally and you have to chin it up for the most part, as books only get you so far, but for anything crafting related, the biggest tip I can give to you is this - use the recipe search [f] while inside the crafting window.
+\textbf{Q:} How to I raise (insert skill here) from (insert level here)?\\
+\textbf{A:} Either by finding books (unlikely to find the exact book you are looking for) or by performing the appropriate action. Combat skills raise naturally and you have to chin it up for the most part, as books only get you so far, but for anything crafting related, the biggest tip I can give to you is this - use the recipe search [f] while inside the crafting window.
+
 By searching using a parameter you can easily find what you should be crafting in order to specifically raise a skill - So if you require fabrications, do 's: fab' in order to find a recipe that has the skill fabrications required and search through the list. Works with any skillname, either partly or in full. Remember that there aren't recipes for each level that are automatically learned, this is meant to incentivise you looking for books or learning the skill out in the wild.
 
-Q: How do I raise mechanics from 0?
-A: The classic one, since mechanics from 0 is somewhat more difficult to raise, as you won't find recipes relating to it in an unmodded game, or with some side-skills taken at the very start.
+\textbf{Q:} How do I raise mechanics from 0?\\
+\textbf{A:} The classic one, since mechanics from 0 is somewhat more difficult to raise, as you won't find recipes relating to it in an unmodded game, or with some side-skills taken at the very start.
+
 My general suggestion - make 4 wooden frames, have 40 nails around and create 2 vehicles (construction menu), after starting the vehicle, install a wooden box into the 1 tile (make sure you have high focus for this, otherwise it'll take more)
+
 This usually gets you to mechanics 1, at which point you can uninstall/install smaller parts from existing vehicles using a screwdriver.
 
-Q: Why do my shots keep missing even at close range?
-A: Make sure to aim by waiting [.] or use one of the appropriate aiming options in the firing menu. [a]im, [c]areful aim or [p]recise aim respectively.
+\textbf{Q:} Why do my shots keep missing even at close range?\\
+\textbf{A:} Make sure to aim by waiting [.] or use one of the appropriate aiming options in the firing menu. [a]im, [c]areful aim or [p]recise aim respectively.
 
-Q: How do I cook food and heat up existing food?
-A: use the crafting menu [\&] and select what you wish to create. To heat up food, you require a tool you need to activate (Frying Pan/Pot/Stone pot etc.) and either a fire or tool that can work for heating (Hotplate, Mess Kit etc.)
+\textbf{Q:} How do I cook food and heat up existing food?\\
+\textbf{A:} use the crafting menu [\&] and select what you wish to create. To heat up food, you require a tool you need to activate (Frying Pan/Pot/Stone pot etc.) and either a fire or tool that can work for heating (Hotplate, Mess Kit etc.)
 
-Q: Why am I sick?
-A: General sicknesses like the common cold of flu just happen, unless you wear a gas mask or similar constantly, avoiding those is gonna be next to impossible. If you got poisoned or food poisoning, this happened because the food you decided to throw into your system wasn't meant for eating raw. Some enemies can also infect you with disease-like status effects.
+\textbf{Q:} Why am I sick?\\
+\textbf{A:} General sicknesses like the common cold of flu just happen, unless you wear a gas mask or similar constantly, avoiding those is gonna be next to impossible. If you got poisoned or food poisoning, this happened because the food you decided to throw into your system wasn't meant for eating raw. Some enemies can also infect you with disease-like status effects.
 
-Q: How do I run from zombies?
-A: Press ['] to toggle between walking and sprinting. Also make sure to break line of sight, even though zombies can track you using scent, their vision is the most important sense.
+\textbf{Q:} How do I run from zombies?\\
+\textbf{A:} Press ['] to toggle between walking and sprinting. Also make sure to break line of sight, even though zombies can track you using scent, their vision is the most important sense.
 
-Q: How do I loot towns?
-A: be creative! Use fire to torch an already looted building to attract zombies to burn to death, raid at night (carries its' own risks), or just run through it with a pair of rollerblades while dragging a cart behind you.
+\textbf{Q:} How do I loot towns?\\
+\textbf{A:} be creative! Use fire to torch an already looted building to attract zombies to burn to death, raid at night (carries its' own risks), or just run through it with a pair of rollerblades while dragging a cart behind you.
 
-Q: Why can't I hit stuff in melee?
-A: Either you lack the skill in your weapon category or (more likely) you are too over encumbered with your gear. Encumbrance is king when it comes to combat and you will have a hard time hitting an enemy with 2 backpacks and 2 makeshift slings worn. So feel free to read the section 5.3.2 Temperature and Clothing to get a general idea of how clothing affects you, or 5.3.5 Combat to get a better grasp of combat.
+\textbf{Q:} Why can't I hit stuff in melee?\\
+\textbf{A:} Either you lack the skill in your weapon category or (more likely) you are too over encumbered with your gear. Encumbrance is king when it comes to combat and you will have a hard time hitting an enemy with 2 backpacks and 2 makeshift slings worn. So feel free to read the section 5.3.2 Temperature and Clothing to get a general idea of how clothing affects you, or 5.3.5 Combat to get a better grasp of combat.
 
-Q: How do I train my skills?
-A: Not only was this answered as the very first question, but again. Use them! Every action performed that is linked to a certain skill will increase it naturally, or if you happen to find a book, read that.
+\textbf{Q:} How do I train my skills?\\
+\textbf{A:} Not only was this answered as the very first question, but again. Use them! Every action performed that is linked to a certain skill will increase it naturally, or if you happen to find a book, read that.
 
-Q: Something keeps hurting me but I'm not being attacked or anything?
-A: You most likely have caught a parasite by eating raw meat. Curing that requires some antiparasitic drugs.
+\textbf{Q:} Something keeps hurting me but I'm not being attacked or anything?\\
+\textbf{A:} You most likely have caught a parasite by eating raw meat. Curing that requires some antiparasitic drugs.
 
-Q: I'm infected, what do I do?
-A: Pray to whatever higher being that you will survive. If you are however an atheist, your best, and only option at this point are to find some Antibiotics or Royal Jelly to cure the infection. Atreyupan is only a prophylactic measure and can't cure infections, only slow them down, prolonging your time window from 24hrs to 48hrs. Your best option is to not let deep bite wounds get to the point of being infected.
+\textbf{Q:} I'm infected, what do I do?\\
+\textbf{A:} Pray to whatever higher being that you will survive. If you are however an atheist, your best, and only option at this point are to find some Antibiotics or Royal Jelly to cure the infection. Atreyupan is only a prophylactic measure and can't cure infections, only slow them down, prolonging your time window from 24hrs to 48hrs. Your best option is to not let deep bite wounds get to the point of being infected.
 
-Q: How do I stop getting infected?
-A: Any deep bite that you obtain will turn your limb from the normal white Name (i.e. TORSO: \textbar\textbar\textbar\textbar\\) to a blue coloured name. This can also be seen in character overview [@] under status effects (the bottom right part of the window). When you are at this stage, a deep bite wound can either be cleaned using any form of disinfectant (disinfectant, makeshift disinfectant, hydrogen peroxide) on said limb, or it can heal naturally over time. The chance for a bite healing on its own is based on your hidden health stat, so eating and living healthily has its benefits, still, your best option is to carry around a small bottle of disinfectant for on the spot cleaning of wounds.
+\textbf{Q:} How do I stop getting infected?\\
+\textbf{A:} Any deep bite that you obtain will turn your limb from the normal white Name (i.e. TORSO: \textbar\textbar\textbar\textbar\\) to a blue coloured name. This can also be seen in character overview [@] under status effects (the bottom right part of the window). When you are at this stage, a deep bite wound can either be cleaned using any form of disinfectant (disinfectant, makeshift disinfectant, hydrogen peroxide) on said limb, or it can heal naturally over time. The chance for a bite healing on its own is based on your hidden health stat, so eating and living healthily has its benefits, still, your best option is to carry around a small bottle of disinfectant for on the spot cleaning of wounds.
 
-Q: Where can I get a long-term water supply?
-A: Forests contain water tiles you can fill containers in, if those aren't an option - swamps either have salt- or freshwater in them, but usually always contain both somewhere so make sure to check every water tile, even connected ones. If nothing like that works, you can just use a funnel on an open tile and place a water container below (drop it on the same tile).
+\textbf{Q:} Where can I get a long-term water supply?\\
+\textbf{A:} Forests contain water tiles you can fill containers in, if those aren't an option - swamps either have salt- or freshwater in them, but usually always contain both somewhere so make sure to check every water tile, even connected ones. If nothing like that works, you can just use a funnel on an open tile and place a water container below (drop it on the same tile).
 
-Q: How do I control a vehicle?e
-A: [\^] on the driver's seat. If you wish to learn more about vehicles in general, check section 5.3.11 - Vehicles.
+\textbf{Q:} How do I control a vehicle?e\\
+\textbf{A:} [\^] on the driver's seat. If you wish to learn more about vehicles in general, check section 5.3.11 - Vehicles.
 
-Q: Why do I keep dying in combat?
-A: First of all - Welcome to Cataclysm, hope you'll enjoy your stay. But to answer the question - combat has several factors that can easily decide a battle on their own (Pain, Encumbrance, difficulty of Enemy etc.), please feel free to read about combat in the appropriate section.
+\textbf{Q:} Why do I keep dying in combat?\\
+\textbf{A:} First of all - Welcome to Cataclysm, hope you'll enjoy your stay. But to answer the question - combat has several factors that can easily decide a battle on their own (Pain, Encumbrance, difficulty of Enemy etc.), please feel free to read about combat in the appropriate section.
 
-Q: I just started out but idk what to do.
-A: This ain't a question but rejoice nonetheless! Read through this tutorial in its entirety please.
+\textbf{Q:} I just started out but idk what to do.\\
+\textbf{A:} This ain't a question but rejoice nonetheless! Read through this tutorial in its entirety please.
 
-More unassorted tips:
--Make a sling early game for ranged combat and fire pebbles at enemies, it is surprisingly strong against unarmored targets. Anything that is armored will give you trouble thou.
--If you can't find a shopping cart, make your own by using 2 wooden frames (just a vehicle frame + wooden box on the same tile), will create noise when dragged, but it is storage.
--Beware that most buildings that would have an alarm system in real life come with an alarm system in the game, not only attracting zombies nearby, but calling in eyebots. (houses excluded)
--Whats unhealthy in real life is most likely also unhealthy in game.
--Pick your fights carefully, Just because you can beat 3 zombies in a group, doesn't mean it is the same with 3 Zombies + 1 Spitter Zombie
--You need lifting quality for a vehicle part? Just weld a forklift arm (requires steel frame) on to any frame and drag that along. How you can weld a metal piece onto a frame made out of wood, I have no clue.
--Always keep some medical supplies handy - having to run back to your base because you forgot antiseptic is bad enough as is, but bleeding to death because you didn't want to carry 3 bandages with you is your own fault.
--Peek around building corners using [X] - enemies will most likely not notice you doing so.
--The game runs only when you decide to. Take your time and assess your situation to check every possibility.
--While prioritizing what loot is important is a good thing, make sure to get a general idea of what is used as a component for crafts and where to obtain it.
--On that note, read the item descriptions and its additional modifiers carefully! Countless newer players used fake medieval weapons only to wonder why they sucked so much using it.
--Deconstruct furniture (construction menu) instead of [s]mashing it for getting the most resources out of it.
--Electronic components can be obtained from Terminals, Arcade Machines, Washing Machines/Dryers. Ovens carry Heating Elements.
--If you have trouble keeping your food fresh for long, try building a Root Cellar or finding a frozen Science Lab, which will cool your food below freezing point.
--Need a Distraction? Anything creating noise is great, like a two-way radio, firecrackers or a noisemaker to draw zombies from one location to another - works especially great at night so just activate and throw
--Vehicles are the solution to most of your problems - Locked doors? Ram it. Zombie Hulk? Ram it. Low on food? Insert vehicle at high speed into edible animal.
--Turrets and various kinds of robots are actually your friends. Not only are they pretty well armored, they also come with several firearms equipped to deal with the nasty hordes of the apocalypse. Just drag zombies into the more tame ones (like eyebots) while trying to get away, make sure to break line of sight and to NOT walk into those robots. The last thing you want is you riddled with bullet holes from a tank drone.
--Same works for animals - if you can manage to position yourself between a moose and some zombies, by running ['] quickly past a Moose or Bear in a circle motion, you can make the zombies take a path that is a smaller circle and way more likely to get too close to said animal. Just make sure YOU don't get too close to it.
--get to the habit of remembering your vehicles position [K] when [e]xamining it. The last thing you want to do is to search for your shopping cart that you have left behind because you were chased or you simply forgot.
--vehicular tool stations are off-limits to you? No Problem. A couple solar panels on your car, coupled with extra car batteries got you covered. Just install a Battery Compartment Mod into the most commonly used tools (Welder, Forge, Food Dehydrator, Food Processor) and load them up with car batteries.
--Maximize butchering outputs! A Metal Butchering Rack is not difficult to make at the mid game and allows you to create a butchering station on the fly. Keep a couple 2x4's and nails on hand to construct a table, or make the Tourist Table for a deployable one. This also means having high butchering quality helps drastically - a Hunting Knife is the most powerful tool that does not require batteries.
--It's headed right towards you? Yell at it [C]! Many animals are scared by loud noises and can therefore be deterred by yelling at them. This only works for natural wildlife, so deer(which are already afraid of humans) and bears - and even then it doesn't always work, but hey, it might just save your life. Wolves can not be feared by noise, and as of recently, the noise trigger for moose has been removed.
--To recap: do NOT be afraid to play carefully: [X] to peek around corners, [e]xamine closed windows that have their curtains pulled in order to peek out of them and run whenever you feel like you don't want to take a fight - there's no shame in surviving.
+\paragraph{More unassorted tips:}
+\begin{itemize}
+\item Make a sling early game for ranged combat and fire pebbles at enemies, it is surprisingly strong against unarmored targets. Anything that is armored will give you trouble thou.
+\item If you can't find a shopping cart, make your own by using 2 wooden frames (just a vehicle frame + wooden box on the same tile), will create noise when dragged, but it is storage.
+\item Beware that most buildings that would have an alarm system in real life come with an alarm system in the game, not only attracting zombies nearby, but calling in eyebots. (houses excluded)
+\item Whats unhealthy in real life is most likely also unhealthy in game.
+\item Pick your fights carefully, Just because you can beat 3 zombies in a group, doesn't mean it is the same with 3 Zombies + 1 Spitter Zombie
+\item You need lifting quality for a vehicle part? Just weld a forklift arm (requires steel frame) on to any frame and drag that along. How you can weld a metal piece onto a frame made out of wood, I have no clue.
+\item Always keep some medical supplies handy - having to run back to your base because you forgot antiseptic is bad enough as is, but bleeding to death because you didn't want to carry 3 bandages with you is your own fault.
+\item Peek around building corners using [X] - enemies will most likely not notice you doing so.
+\item The game runs only when you decide to. Take your time and assess your situation to check every possibility.
+\item While prioritizing what loot is important is a good thing, make sure to get a general idea of what is used as a component for crafts and where to obtain it.
+\item On that note, read the item descriptions and its additional modifiers carefully! Countless newer players used fake medieval weapons only to wonder why they sucked so much using it.
+\item Deconstruct furniture (construction menu) instead of [s]mashing it for getting the most resources out of it.
+\item Electronic components can be obtained from Terminals, Arcade Machines, Washing Machines/Dryers. Ovens carry Heating Elements.
+\item If you have trouble keeping your food fresh for long, try building a Root Cellar or finding a frozen Science Lab, which will cool your food below freezing point.
+\item Need a Distraction? Anything creating noise is great, like a two-way radio, firecrackers or a noisemaker to draw zombies from one location to another - works especially great at night so just activate and throw
+\item Vehicles are the solution to most of your problems - Locked doors? Ram it. Zombie Hulk? Ram it. Low on food? Insert vehicle at high speed into edible animal.
+\item Turrets and various kinds of robots are actually your friends. Not only are they pretty well armored, they also come with several firearms equipped to deal with the nasty hordes of the apocalypse. Just drag zombies into the more tame ones (like eyebots) while trying to get away, make sure to break line of sight and to NOT walk into those robots. The last thing you want is you riddled with bullet holes from a tank drone.
+\item Same works for animals - if you can manage to position yourself between a moose and some zombies, by running ['] quickly past a Moose or Bear in a circle motion, you can make the zombies take a path that is a smaller circle and way more likely to get too close to said animal. Just make sure YOU don't get too close to it.
+\item Get to the habit of remembering your vehicles position [K] when [e]xamining it. The last thing you want to do is to search for your shopping cart that you have left behind because you were chased or you simply forgot.
+\item Vehicular tool stations are off-limits to you? No Problem. A couple solar panels on your car, coupled with extra car batteries got you covered. Just install a Battery Compartment Mod into the most commonly used tools (Welder, Forge, Food Dehydrator, Food Processor) and load them up with car batteries.
+\item Maximize butchering outputs! A Metal Butchering Rack is not difficult to make at the mid game and allows you to create a butchering station on the fly. Keep a couple 2x4's and nails on hand to construct a table, or make the Tourist Table for a deployable one. This also means having high butchering quality helps drastically - a Hunting Knife is the most powerful tool that does not require batteries.
+\item It's headed right towards you? Yell at it [C]! Many animals are scared by loud noises and can therefore be deterred by yelling at them. This only works for natural wildlife, so deer(which are already afraid of humans) and bears - and even then it doesn't always work, but hey, it might just save your life. Wolves can not be feared by noise, and as of recently, the noise trigger for moose has been removed.
+\end{itemize}
+
+To recap: do NOT be afraid to play carefully: [X] to peek around corners, [e]xamine closed windows that have their curtains pulled in order to peek out of them and run whenever you feel like you don't want to take a fight - there's no shame in surviving.
 
 \end{document}
