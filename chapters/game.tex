@@ -65,7 +65,15 @@ And that pretty much covers the interface, all of those funny values will change
 
 \section{Game mechanics}
 
-As cataclysm is a roguelike, it has some mechanics that are inherently difficult to understand for someone who has never touched a game like this before, but even for veterans of the roguelike genre, some of the extra mechanics provided tend to be a bit difficult to wrap your head around. But to give you a general overview on how things are handled on a base level - The game is basically paused forever, unless you do a move. Whenever you perform an action that takes time, everything else performs an action that takes time. This means movement, using items, combat, while things like inspecting what's around you, checking your inventory and the likes do not take time (for whatever reason, maybe you have a photographic memory). So whenever you move, everything else does. You striking an enemy? So does the enemy. All of this is according to the speed of each entity. You have a base speed of 100. Enemies have a base speed according to their internal values (Zombies are usually slow as shit while some wildlife as fast as a road runner). Everything that happens around you is measured in speed relative to you. If you are being slowed down due to pain, poison or whatever, surrounding entities can perform more actions in the time it took you to perform that one action. This can be a pretty annoying effect. While you struggle to swing a slow weapon at the enemy, he can have already performed several hits to you. Which is why it is important to always check your condition. In the following chapters we will talk about the various possible mechanics that you will come across more in-depth.
+As cataclysm is a roguelike, it has some mechanics that are inherently difficult to understand for someone who has never touched a game like this before, but even for veterans of the roguelike genre, some of the extra mechanics provided tend to be a bit difficult to wrap your head around. But to give you a general overview on how things are handled on a base level - The game is basically paused forever, unless you do a move.
+
+Whenever you perform an action that takes time, everything else performs an action that takes time. This means movement, using items, combat, while things like inspecting what's around you, checking your inventory and the likes do not take time (for whatever reason, maybe you have a photographic memory).
+
+So whenever you move, everything else does. You striking an enemy? So does the enemy. All of this is according to the speed of each entity. You have a base speed of 100. Enemies have a base speed according to their internal values (Zombies are usually slow as shit while some wildlife as fast as a road runner).
+
+Everything that happens around you is measured in speed relative to you. If you are being slowed down due to pain, poison or whatever, surrounding entities can perform more actions in the time it took you to perform that one action. This can be a pretty annoying effect. 
+
+While you struggle to swing a slow weapon at the enemy, he can have already performed several hits to you. Which is why it is important to always check your condition. In the following chapters we will talk about the various possible mechanics that you will come across more in-depth.
 
 \subsection{Your Characters' Needs}
 
@@ -73,13 +81,23 @@ Everyone has needs, you do, I do, so why shouldn't your character in a survival 
 
 So how do your needs work? Every need has an invisible numeric counter in the background ticking down whenever time passes in the game. Once the number goes below a certain point, you will be notified in that blank space to the right of your health, and your stats may be affected. The more pressing a need is, the heavier the impact on your performance.
 
-The big one and I mean the BIG ONE is water. Water is essential for survival, without water, you are a goner within a couple days at best. While being thirsty in itself is not much of a problem, barely reducing your speed (extremely small \% amounts), it can add up with other negatives, so having a drink every now and then keeps you happy, and more importantly, keeps you alive. Having a good supply of drinkable water is mandatory for any basic form of survival, besides it being the need that ticks down the fastest, which is also why it is your most important need. Beware, as many sources of water are not inherently drinkable. Most notably - toilet water, which newer players tend to drink without checking the consequences. Drinking unpurified water carries the risk of giving you food poisoning. While ponds and rivers have a chance to poison you, it is in a pinch doable to drink from them to quench your thirst, remember that you are taking a risk. And vomiting out the water and potentially food you had beforehand would just waste supplies as well as hitting your mood badly for a while.
+The big one and I mean the BIG ONE is water. Water is essential for survival, without water, you are a goner within a couple days at best. While being thirsty in itself is not much of a problem, barely reducing your speed (extremely small \% amounts), it can add up with other negatives, so having a drink every now and then keeps you happy, and more importantly, keeps you alive. Having a good supply of drinkable water is mandatory for any basic form of survival, besides it being the need that ticks down the fastest, which is also why it is your most important need.
+
+Beware, as many sources of water are not inherently drinkable. Most notably - toilet water, which newer players tend to drink without checking the consequences. Drinking unpurified water carries the risk of giving you food poisoning. While ponds and rivers have a chance to poison you, it is in a pinch doable to drink from them to quench your thirst, remember that you are taking a risk. And vomiting out the water and potentially food you had beforehand would just waste supplies as well as hitting your mood badly for a while.
 
 The next big thing on the list is food. Food comes in various shapes, tastes and forms, but it all has one important factor - to keep your stomach filled and you running. Being hungry has no negatives at all, but being famished or worse starts to impact your stats and speed. But rejoice, food is plentiful if you know where to look. Forests have edibles in them for most of the year (Note: Food balance changes made forests way less appealing for their veggies, more for their Nuts and wild game) You can get by eating junk food you looted from houses, off of enemies, but sooner or later, you want to properly stock up on long lasting food.
 
-On the note of finding and eating food found in the wilds - do NOT eat unprocessed food unless you absolutely have to. Eating raw meat carries the risk of catching a food parasite, which are not only unlogged in the games events (meaning you will not be notified), but can also severely hinder any progress until removed by drugs. These hindrances are draining food and water supplies quicker, unexpected pain, messages about your joints aching or hallucinations (depending on what type of parasite you caught). Also, raw veggies usually carry a mood penalty to be eaten raw, so while it works in a pinch, the extra mood drain will quickly stack up and slow further progress for a while, you're therefore better off processing them in one way or another.
+On the note of finding and eating food found in the wilds - do NOT eat unprocessed food unless you absolutely have to. Eating raw meat carries the risk of catching a food parasite, which are not only unlogged in the games events (meaning you will not be notified), but can also severely hinder any progress until removed by drugs. These hindrances are draining food and water supplies quicker, unexpected pain, messages about your joints aching or hallucinations (depending on what type of parasite you caught).
 
-And that leaves us with sleep. While sleeping is nice to skip the nights in which you can do only so much unless you have a permanent light source (Which, if you spawned in the shelter, you have in the form of a lit-up Terminal) it is also essential to not suffer sleep deprivation. While it is the need that is the least necessary, it still is a necessity, simply because being dead tired imposes a great hit on intelligence (-4) and therefore makes crafting way less efficient. To go to sleep, hit the [\S] button and select that you want to go to sleep. You can sleep anywhere, from the concrete of the road, to a bed or in a vehicles' seat. Each on its own having a certain difficulty to fall asleep on. Sleeping on a hard floor is obviously way more difficult than sleeping on a bed, but even if that is not a possibility, a bench or table is better than sleeping on the floor. There are also items that assist you in falling asleep, like pillows. Just have them on the tile you wish to fall asleep in. Remember though, that you just don't fall asleep the instant you lie down, and being sated and full, having a proper bed (or seat) to sleep in, as well as actually requiring sleep makes it all the easier to fall asleep. Make sure to go to bed early and potentially wake up earlier, as waking up late means you wasted precious sunlight in which you could explore, craft and loot.
+Also, raw veggies usually carry a mood penalty to be eaten raw, so while it works in a pinch, the extra mood drain will quickly stack up and slow further progress for a while, you're therefore better off processing them in one way or another.
+
+And that leaves us with sleep. While sleeping is nice to skip the nights in which you can do only so much unless you have a permanent light source (Which, if you spawned in the shelter, you have in the form of a lit-up Terminal) it is also essential to not suffer sleep deprivation. While it is the need that is the least necessary, it still is a necessity, simply because being dead tired imposes a great hit on intelligence (-4) and therefore makes crafting way less efficient.
+
+To go to sleep, hit the [\S] button and select that you want to go to sleep. You can sleep anywhere, from the concrete of the road, to a bed or in a vehicles' seat. Each on its own having a certain difficulty to fall asleep on. Sleeping on a hard floor is obviously way more difficult than sleeping on a bed, but even if that is not a possibility, a bench or table is better than sleeping on the floor. 
+
+There are also items that assist you in falling asleep, like pillows. Just have them on the tile you wish to fall asleep in. Remember though, that you just don't fall asleep the instant you lie down, and being sated and full, having a proper bed (or seat) to sleep in, as well as actually requiring sleep makes it all the easier to fall asleep.
+
+Make sure to go to bed early and potentially wake up earlier, as waking up late means you wasted precious sunlight in which you could explore, craft and loot.
 
 While not technically a need, you will quickly perceive it as such: Your happiness, or in other terms - the mood.
 
@@ -131,7 +149,7 @@ So, now to take a look at these attributes.
 
 The body part(s) a piece of clothing is worn on - this is pretty self explanatory. If you wear something that would cover your entire body, say, a suit, it will cover the appropriate parts, namely the torso, arms and legs. A bandana for example will cover your mouth. You get the idea, You can also just check the items details to see what body parts it covers, as well as...
 
--Every piece of clothing comes with a warmth value to it that it will apply to the body part that it is worn on. If your clothing piece covers multiple body parts this value is applied to each body piece at the full value. On the note of that, most of the clothing follows logical values when it comes to its' material. Fur is, for the amount of material used, warmer than leather, which in turn is warmer than cloth.
+Every piece of clothing comes with a warmth value to it that it will apply to the body part that it is worn on. If your clothing piece covers multiple body parts this value is applied to each body piece at the full value. On the note of that, most of the clothing follows logical values when it comes to its' material. Fur is, for the amount of material used, warmer than leather, which in turn is warmer than cloth.
 
 The \% coverage of the body parts it is worn on - The effect of which is really important.
 
@@ -148,38 +166,52 @@ On the note of high temperatures it should be stated that there is no way to red
 
 Encumbrance, or how difficult it is to move in your clothing. Again, layering helps, as you are suffering no penalties for wearing 1 piece of clothing for each layer of a body part. Each piece of clothing makes movement more difficult in a certain way, as each body part has a different negative while being encumbered:
 
-Head:
--does currently nothing and only limits what you can wear (to not stack helmet after helmet on your head)
+\textbf{Head:}\\
+Does currently nothing and only limits what you can wear (to not stack helmet after helmet on your head)
 
-Eyes:
--negative 1 Per while checking traps for each 10 encumberment
--Extra +0.5 throwing dispersion per point of encumbrance
--extra +0.25 ranged dispersion per point of encumbrance
+\textbf{Eyes:}
+\begin{itemize}
+\item Negative 1 Per while checking traps for each 10 encumberment
+\item Extra +0.5 throwing dispersion per point of encumbrance
+\item Extra +0.25 ranged dispersion per point of encumbrance
+\end{itemize}
 
-Mouth:
--running costs + (mouth encumberment lvl * 5) increased stamina
--decreases yelling volume
+\textbf{Mouth:}
+\begin{itemize}
+\item Running costs + (mouth encumberment lvl * 5) increased stamina
+\item Decreases yelling volume
+\end{itemize}
 
-Torso:
--negative 1\% melee to hit per point of encumbrance
--melee swings cost +1 movement point per encumbrance
--negative 0.1 dodge skill per point of encumbrance
--swimming Encumbrance Lvl /10 * (80 - Swimming Skill Lvl * 3)
+\textbf{Torso:}
+\begin{itemize}
+\item Negative 1\% melee to hit per point of encumbrance
+\item Melee swings cost +1 movement point per encumbrance
+\item Negative 0.1 dodge skill per point of encumbrance
+\item Swimming Encumbrance Lvl /10 * (80 - Swimming Skill Lvl * 3)
+\end{itemize}
 
-Arms:
--extra aiming penalty by 2*arm encumberment
+\textbf{Arms:}
+\begin{itemize}
+\item Extra aiming penalty by 2*arm encumberment
+\end{itemize}
 
-Hands:
--extra reloading time: 30*hand encumberment lvl
--throwing dexterity (throwing - hand encumberment lvl)
+\textbf{Hands:}
+\begin{itemize}
+\item Extra reloading time: 30*hand encumberment lvl
+\item Throwing dexterity (throwing - hand encumberment lvl)
+\end{itemize}
 
-legs:
--Running cost + (leg encumbrance * 3)
--swimming cost: encumbrance * (50 - Swimming Skill lvl * 2)
--dodge skill: -encumberment/2
+\textbf{Legs:}
+\begin{itemize}
+\item Running cost + (leg encumbrance * 3)
+\item Swimming cost: encumbrance * (50 - Swimming Skill lvl * 2)
+\item Dodge skill: -encumberment/2
+\end{itemize}
 
-Feet:
--running cost + (feet encumbrance Level * 5)
+\textbf{Feet:}
+\begin{itemize}
+\item Running cost + (feet encumbrance Level * 5)
+\end{itemize}
 
 Basically - the more you wear, the less freely you can move, which, in combat, can be pretty hampering. However, clothing does make up for it, we already know that it has warmth, we know it's protecting you, to a degree, but how does that actually work? We'll talk about that now:
 
@@ -194,6 +226,7 @@ Values in the Category for ACID give you a resistance to being affected by hit a
 Your legs? yes, you only have 6 body parts, 4 extremities, a head and the torso that everything is attached to, so feet and hands are considered to be legs and arms respectively.
 
 Now, what about fire? Well, any gear that is flame-resistant (Basically created out of Nomex) will not only douse you quickly if you managed to get set ablaze, but also reduces the damage to the covered body parts substantially, making it possible to survive a trip into fire. Just don't expect to be surviving for extended periods of time.
+
 As a note on certain materials, clothing that is made out of either cloth, leather, fur or wool will catch on fire and take damage until the fire is put out, or the item in question destroyed.
 
 Environmental Protection? Well, this is something special that I feel should be explained more thoroughly. It will basically allow you to potentially ignore certain field-effects and stop you from catching diseases (if you wear enough mouth protection, that is).
@@ -201,7 +234,9 @@ Environmental Protection? Well, this is something special that I feel should be 
 Those field effects are (just to name a few): sludge, acid, electricity, gas of various kinds, webs etc.
 
 As you can see - acid is on the list, so you also require environmental protection as well as acid protection to gain potential immunity, tough this would usually be nothing to work towards on the first couple days, it is something to keep in mind later down the line.
+
 So how does it work?
+
 Well, whenever you would happen to be affected by a field-effect, the game checks its' strength against the strength of your environmental protection for the affected body part.
 
 But there's still 2 attributes to name - so let's go over the material that your clothing is made out of: While the material seems to have little implications on how a piece of gear holds up (leather armor can be nearly as good as a kevlar vest, it all depends on how it's made obviously) when faced in combat, it is the defining factor in repairs. You can use your tailoring tool of choice to fix clothing worn or in your inventory, and whatever material it is made out of is required to do repairs. Not only that, but it dictates the tools applicable as well as the skill used. Items that are worn, yet require fabrications to be made, check against the fabrication skill and more often than not (considering most fabricated things are made out of metals or plastic) require different tools, like a welder or soldering iron instead of a needle or sewing kit.
@@ -209,17 +244,21 @@ But there's still 2 attributes to name - so let's go over the material that your
 To go into more technical details about material effects - each material has its own values for defence assigned in the games' files. Each piece of clothing has its own material thickness (which you can't see) assigned to it, this in turn assigns how much protection a certain piece of clothing offers. So in general terms, something made out of Kevlar is generally better than something made out of Leather, except for the fact that the clothing thickness could be higher and therefore superior, but it is a general rule of thumb that does apply.
 
 And last but not least, each piece of clothing can have several extra effects, which I'm going to list:
--pockets
--hood
--rain protection
--gas protection
--radiation protection
--electricity protection
--built-in sheath/holster
--tool storage/loops
--durability (not exclusive to clothes, but is still a special)
+
+\begin{itemize}
+\item pockets
+\item hood
+\item rain protection
+\item gas protection
+\item radiation protection
+\item electricity protection
+\item built-in sheath/holster
+\item tool storage/loops
+\item durability (not exclusive to clothes, but is still a special)
+\end{itemize}
 
 Well, what do these do?
+
 The built in sheath as well as the tool storage seem obvious - [a]ctivate the piece of clothing to store an item that can fit into it. It still counts towards the tools you are carrying if you do certain tasks, like a sheathed hunting knife still being able to butcher corpses, or a hammer being stored in a toolbelt if you were to deconstruct furniture.
 
 The pockets are self-explanatory in their description, as long as your hands are free (you not wielding a weapon), you will use those to keep your hands warm.
@@ -235,15 +274,19 @@ Radiation Protection as well is being exclusive to suits, mostly things like Haz
 Electricity Protection also comes from suits, most notably, the Faraday suit, which will protect you from arcs of lightning zapping you as the suit will be grounded. However, this does not apply to zapback by attacking something conductive (like a shocker) with a weapon that will conduct electricity or your bare hands.
 
 \subsection{Crafting}
+
 Time to talk about the single-most important aspect of the game - crafting.
+
 You wouldn't believe how much code is reserved for crafting alone, especially when you consider that you can also pretty much disassemble whatever you think off. But how does it actually work and what benefits do you, as a survivor, have from it?
 
 To take it from the top, it works by opening up the crafting menu [\&] and being again bombarded with recipes, sitting in categories and subcategories and the list goes on and on.. But not to be intimidated by it, all crafting procedures follow the same steps you need to fulfill to be allowed to craft an item:
 
-You require the appropriate tools (some also require charges)
-The appropriate components to make said item
-Time, obviously, you won't just create an item in the fracture of a second. (most of the time)
-And, optionally, light. If you can't see, you can't craft.
+\begin{itemize}
+\item You require the appropriate tools (some also require charges)
+\item The appropriate components to make said item
+\item Time, obviously, you won't just create an item in the fracture of a second. (most of the time)
+\item And, optionally, light. If you can't see, you can't craft.
+\end{itemize}
 
 First of all, we need to navigate this place though: [TAB] and [Shift] + [TAB] to navigate the top selectors, [<] and [>] to navigate the subcategories and the arrow keys or NumPad inputs to scroll around inside.
 
@@ -271,10 +314,13 @@ On the note of crafting and their respective tools - Tools will never be consume
 
 Construction pretty much works the same way crafting does, for the most part, and is accessed using the [*] button. It will bring up a list in which you can filter and search, by pressing [f]. Each construction has several requirements:
 
-The appropriate tools
-The required Materials
-The skill required for it
-and a space in which you can build it.
+\begin{itemize}
+\item The appropriate tools
+\item The required Materials
+\item The skill required for it
+\item A space in which you can build it.
+\end{itemize}
+
 Light is interestingly enough not relevant for doing construction works.
 
 But why would you bother constructing things if there's structures all around the world, ready for the taking? Well, walls can be damaged or broken in their entirety, requiring some makeshift fixing or replacing. You might want to board up windows or doors early in your career to limit visibility as well as entry points for zombies (though they can bash through if they run into it or notice you on the other side). Some tools and stations might help you in your craft, most notably the smoking rack for food preservation or a rock forge for smithing items. Or you just want to dig something resembling a moat by digging deep pits around your base to deal damage to incoming zombies, which are more than willing to step into it (this can be used to create trap areas). So there is more than enough applications for doing it, it all comes down to what you want to do and how much you are willing to invest into a certain location.
@@ -323,29 +369,29 @@ Let's assume you inhaled a lungful of smoke. This is the status effect. It will 
 
 This is how status effects work, effect - events - frequency. There is a bunch of status effects that one should be aware off, however, if you ever feel like wanting to know how affected you are, press the [@]-button to see the general character overview and switch over to the current effects window. There you can see which effect does what and how often it does it. Beware that some effects, like parasites, are not listed here. Some status effects you should know about are:
 
-Poisoned/Badly Poisoned - not only deals damage and is considered a painkiller, but slows you down drastically
+\textbf{Poisoned/Badly Poisoned} - not only deals damage and is considered a painkiller, but slows you down drastically
 
-Painkiller/Stimulant overdose - Occurs once the Value for either Painkiller or Stimulant hits [25], impacting your stats heavily.
+\textbf{Painkiller/Stimulant overdose} - Occurs once the Value for either Painkiller or Stimulant hits [25], impacting your stats heavily.
 
-Bite wound - If you take a hit from a bite attack during combat that manages to penetrate your armor, there is a chance of you receiving a bite wound. This wound will cause pain over the course of its existence and has the chance to turn into an infection that will inevitably kill you later down the line if left untreated. Treat such wounds using antiseptic items (antiseptic liquid/powder, hydrogen peroxide) or if those are not available, throw some Atryupan into your system and hope for the wound not getting infected, or just pray to whatever higher being you believe in that your health stat is strong enough to not turn the wound infected, as each player has a base chance to not carry an infection and the wound clearing itself after a sufficient amount of time.
+\textbf{Bite wound} - If you take a hit from a bite attack during combat that manages to penetrate your armor, there is a chance of you receiving a bite wound. This wound will cause pain over the course of its existence and has the chance to turn into an infection that will inevitably kill you later down the line if left untreated. Treat such wounds using antiseptic items (antiseptic liquid/powder, hydrogen peroxide) or if those are not available, throw some Atryupan into your system and hope for the wound not getting infected, or just pray to whatever higher being you believe in that your health stat is strong enough to not turn the wound infected, as each player has a base chance to not carry an infection and the wound clearing itself after a sufficient amount of time.
 
 And if you manage to not do so or get unlucky, you end up with an...
 
-Infection - This is a serious problem that could end your run. You only have 24 hours from the moment the wound turns infected to being treated by using proper Antibiotics. Not just that, but while you are infected, your stats are severely hampered (-2 each, increasing in severity over the course of the infection) And once the infection progresses far enough, you'll randomly pass out, which is the last thing you want in such a situation.
+\textbf{Infection} - This is a serious problem that could end your run. You only have 24 hours from the moment the wound turns infected to being treated by using proper Antibiotics. Not just that, but while you are infected, your stats are severely hampered (-2 each, increasing in severity over the course of the infection) And once the infection progresses far enough, you'll randomly pass out, which is the last thing you want in such a situation.
 
 You could also be extremely lucky and hope for an infection to cure itself, however, a freshly spawned survivor with normal health stat has only an all around 10\% chance of surviving the infection, around 25\% if you picked the 'infection resistant' perk.
 
-Adrenaline Rush - Boost to Str, Dex and Per at the cost of Int (-8), constantly regenerate Stamina and speed boost.
+\textbf{Adrenaline Rush} - Boost to Str, Dex and Per at the cost of Int (-8), constantly regenerate Stamina and speed boost.
 
-Adrenaline Comedown - speed debuff (-10\%) and Stat reduction (-2 each)
+\textbf{Adrenaline Comedown} - speed debuff (-10\%) and Stat reduction (-2 each)
 
-Having a Smoke - +1 Int and Per
+\textbf{Having a Smoke} - +1 Int and Per
 
-The Shakes - This is usually a craving effect caused by addiction, but can also happen due to the trait 'Jittery', which is pretty much the opposite of an adrenaline rush - your dexterity will be hampered at random while under stress or under the effect of Stimulants. (-4, also -1 Str)
+\textbf{The Shakes} - This is usually a craving effect caused by addiction, but can also happen due to the trait 'Jittery', which is pretty much the opposite of an adrenaline rush - your dexterity will be hampered at random while under stress or under the effect of Stimulants. (-4, also -1 Str)
 
-Radiation [x] - with x representing the number, your radiation level can have no consequences at all, positive benefits or (for the most part) negatives attached to it. Being irradiated with 1 or 2 points is hardly noticeable, with it slowing you down by only a small percentage amount. Yet, hitting radiation levels of 5 and upwards is where it becomes an immediate Problem that requires fixing. At 5+ you will randomly become nauseous, which in turn could lead you throwing up all the tasty potato chips you just downed, turning the positive mood into a hefty negative. Being irradiated at all also damages your health stat (more on that on the next chapter) while also slowing down your healing naturally and at ranks 10 upwards you will start to take damage to your entire body. Not only that, whenever radiation ticks down, there is a chance of it eating a whole lot of radiation ranks at the cost of obtaining a random mutation, the more irradiated you are, the more likely it is, if the radiation itself won't kill you. So what benefits are there, except you may be glowing in the dark soon? Well, specific perks can work great in combination with high ranks of radiation - Most notably Robust Genetics. If you are willing to gain random mutations, this is a cheap way to just mutating without too many negatives, though you will gain mutations of all different kinds, some may be undesirable despite being labeled as 'neutral' or 'positive'. Another great perk is Radiogenic, which slowly heals you while you are under the effect of Radiation. But for the most part, avoid radiation at all costs and if you have to stay in a radiated area, make the trip short, or pop in some potassium iodine.
+\textbf{Radiation [x]} - with x representing the number, your radiation level can have no consequences at all, positive benefits or (for the most part) negatives attached to it. Being irradiated with 1 or 2 points is hardly noticeable, with it slowing you down by only a small percentage amount. Yet, hitting radiation levels of 5 and upwards is where it becomes an immediate Problem that requires fixing. At 5+ you will randomly become nauseous, which in turn could lead you throwing up all the tasty potato chips you just downed, turning the positive mood into a hefty negative. Being irradiated at all also damages your health stat (more on that on the next chapter) while also slowing down your healing naturally and at ranks 10 upwards you will start to take damage to your entire body. Not only that, whenever radiation ticks down, there is a chance of it eating a whole lot of radiation ranks at the cost of obtaining a random mutation, the more irradiated you are, the more likely it is, if the radiation itself won't kill you. So what benefits are there, except you may be glowing in the dark soon? Well, specific perks can work great in combination with high ranks of radiation - Most notably Robust Genetics. If you are willing to gain random mutations, this is a cheap way to just mutating without too many negatives, though you will gain mutations of all different kinds, some may be undesirable despite being labeled as 'neutral' or 'positive'. Another great perk is Radiogenic, which slowly heals you while you are under the effect of Radiation. But for the most part, avoid radiation at all costs and if you have to stay in a radiated area, make the trip short, or pop in some potassium iodine.
 
-Hungry, Thirsty and tired are also listed under the general effects window as status effects with their current level of incapacitation to you.
+\textbf{Hungry, Thirsty and tired} are also listed under the general effects window as status effects with their current level of incapacitation to you.
 
 You should make it a constant habit to check your general overview screen [@] after combat or when visiting certain areas to see if anything special is affecting you, but this pretty much covers all there is to some of the more notable status effects, so we shall move on.
 
@@ -379,15 +425,17 @@ Yes, installing something as machinery into your body is not something to take l
 
 Well, your stats play an important role on that matter. Your intelligence helps drastically when installing CBMs, as do your skills. First aid, computers and electronics (in this order) determine your success chance of installing a CBM. There are three different outcomes:
 
-Success
-
-Failure without incident
-
-Failure with one of the following incidents:
-    1. failure with a chance of pain
-    2. failure with a chance of body damage (possible if fail > 12\%) (damage rolled from 60-82)
-    3. failure with a chance of loss of some or all bionics (possible if fail > 20\%)
-    4. failure with a chance to install a malfunctioning bionic (possible if fail > 35\%)
+\begin{itemize}
+\item Success
+\item Failure without incident
+\item Failure with one of the following incidents:
+\begin{itemize}
+\item Failure with a chance of pain
+\item Failure with a chance of body damage\\(possible if fail > 12\%) (damage rolled from 60-82)
+\item Failure with a chance of loss of some or all bionics\\(possible if fail > 20\%)
+\item Failure with a chance to install a malfunctioning bionic\\ (possible if fail > 35\%)
+\end{itemize}
+\end{itemize}
     
 Regardless of the outcome, the CBM will be used up. But for the event that you did end up with a failed installation and are now having to remove it, the AutoDoc can do that too, provided you still have Anesthetics left. See why you should weigh each installation decision?
 
@@ -450,19 +498,23 @@ Each vehicle will however have a safe and top speed value, which is determined b
 But what about working on a vehicle? You do have to find a vehicle that is suitable to drive after all. Well, that is where the 'vehicle overview' window comes in handy, when you [e]xamine a vehicle, you will have the option to check its condition, bringing you to a weird looking screen with all different variables on the bottom, names on the right and some depiction of the vehicle in question at the left hand side.
 
 This is the core of the vehicle system and how you will interact with it.
+
 From the vehicle menu you can [i]nstall parts, [r]epair parts, re[f]ill fuel sources, rem[o]ve parts, [s]iphon fluids, [c]hange tires, [m]end any faulty parts, r[e]name the vehicle or assign cre[w] to a seat. (fixed NPC spot they will take)
 
 But how and where do you install these parts? Well, the left hand view that shows you the vehicle can be navigated using the NumPad. Pressing [i] to install a part onto an existing tile of the vehicle will show you a list of what can currently be installed into that location. Pressing [o] will allow you to remove parts from this location respectively. You can also attach a new structure-part to the 4 cardinal sides of an already existing structure-part, this is used to expand vehicles in several ways, mostly to increase its size and therefore what you can fit into it.
 
 So, with that in mind, with me talking about structure parts and the likes, how are vehicles composed in terms of their parts? Each vehicle has several layers to it, just like clothing, but in this case, it determines where the part is sitting in relative height:
-    ' Roof
-    ' Center
-    ' Fuel source
-    ' Engine block LO
-    ' Structure
-    ' Under
-    ' Armor
-    ' Anywhere/Other
+
+\begin{itemize}
+\item Roof
+\item Center
+\item Fuel source
+\item Engine block LO
+\item Structure
+\item Under
+\item Armor
+\item Anywhere/Other
+\end{itemize}
 
 Something to note is that these positions are not connected to each other in the traditional sense, but only block extra parts of the same category to be installed there. You could have a frame with a solar panel on top, which in turn would occupy the 'Structure' location, as well as the 'On Roof' location of that one tile without actually being connected. The Solar panel is technically just floating up there, firmly attached. This is done to prevent you stacking multiple parts into the same tile, like having 20 solar panels stacked onto the same spot, or several boards in the same Center tile. This way you will have to choose what to install where and it potentially blocking out another part you might have wanted there.
 
@@ -470,13 +522,15 @@ But then again, some parts can only be attached if a certain part is attached al
 
 So, with that out of the way, how does it work? Well, to be able to do work on a vehicle, you require tools, a lot of them, each according to the part you want to work on:
 
-Bolt Turning / Fine Bolt Turning (Wrench)
-Screwdriving (Screwdriver)
-Metal Sawing / Fine Metal Sawing (Hacksaw)
-Hammer + Nails (for wooden parts)
-Welder + Glare Protection 2 (for metal parts)
-Lifting Quality (most likely a secondary vehicle with a lift of some kind attached) OR enough Str to lift it yourself
-Jacking Quality (A jack that can lift the weight of the vehicle) OR enough Str to Jack the Vehicle in its entirety
+\begin{itemize}
+\item Bolt Turning / Fine Bolt Turning (Wrench)
+\item Screwdriving (Screwdriver)
+\item Metal Sawing / Fine Metal Sawing (Hacksaw)
+\item Hammer + Nails (for wooden parts)
+\item Welder + Glare Protection 2 (for metal parts)
+\item Lifting Quality (most likely a secondary vehicle with a lift of some kind attached) OR enough Str to lift it yourself
+\item Jacking Quality (A jack that can lift the weight of the vehicle) OR enough Str to Jack the Vehicle in its entirety
+\end{itemize}
 
 Pr0-Tip: Lifting quality has been reworked constantly in its behaviour - As of right now, the tool with lifting quality needs to be within 4 tiles of the part you wish to remove and requires line of sight (LOS) to the tile.
 
