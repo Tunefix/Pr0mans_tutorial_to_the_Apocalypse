@@ -1,0 +1,101 @@
+\chapter{World}
+
+When selecting new game, you are asked to basically create a new world from scratch, though this option can also be done from the [W]orld option in the main menu. it'll bring you to the exact same screen. There you will be asked to include or exclude mods for the extra experience.
+On the mod list screen you can move around the inner screen in which you can select mods using the arrow keys and add/remove them using Enter. cycle through the mod tabs [default], [Blacklist] and [Balance] using [>] and [<] respectively, and move through the top rosters [World Mods], [World Options] and [Finalize World] using [TAB] and [Shift] + [Tab].
+
+So with this in mind, we could include some mods. For the sake of this Tutorial, we shall only include the base game and the mods that are standard active - Meaning the C:DDA Core, Filthy Clothing, Disable NPC Needs and Simplified Nutrition.
+
+How do we set up our world though? What do the different numbers and scales do exactly and what would be considered to be an easy game or hard game?
+
+
+\section{The Creation}
+
+World end Handling - Keep/Reset/Delete -> Basically allows you to tell the game what happens to the world once you die. I personally prefer to play using the Reset settings, as starting in a location that has been looted by a previous character can be utterly frustrating.
+
+Size of Cities - [0 to 16] -> this setting sets the scaling factors to city generation. Remember that even with very small or very big numbers, size of cities can vary drastically. The base value of 8 (increased from 4 as of version 8400)  generates town of sizes ranging from 10 houses up to big cities with over 100 buildings. Generally ranging somewhere from 40-70 based on observation. I'd go with a 10.
+
+City Spacing - [0 to 8] -> This setting in turn is an indicator for how close cities are going to be generated to each other. Smaller numbers mean cities are closer together, while a spacing of 6+ makes for day long travels, even with a vehicle. Go with 4 for the best results for the first world.
+
+Spawn Rate Scaling Factor [0.00 to 50.00] -> Sets the amount of monster spawning, a value of 0 would deactivate spawning all together, while a value of 2 would effectively double the amount of monsters. Small changes can already have a huge impact on monster density inside a town, especially when paired with Wanders Spawns: On.
+
+Carrion Spawn Rate scaling factor [0\% to 1000\%] -> Sets the value at how often (and therefore how quick) critters spawn out of rotten edibles, a value of 0\% disables this mechanic all together.
+
+Item Spawn scaling factor [0.01 to 10.00] -> Sets the amount of items found in certain locations. This does not impact monster drop tables and is only meant to influence how many items are spawned in any given spot.
+NPC Spawn Rate scaling factor [0 to 100.00] -> sets the density and thereby the chance of an NPC spawning in on the edge of your reality bubble (more on that in chapter 5.3.10). This does only influence randomly spawned in NPCs, not static NPCs. If you wish to encounter NPCs on a regular basis, set this value to 1 - 1.5, for the odd encounter maybe 0.5
+
+Monster Evolution scaling factor [0.00 to 100] -> sets the time required for a monster to spawn 1 evolution category higher than it normally would have. 0 disables evolution of monsters, a higher number means more days need to pass for evolution to occur. If you have trouble with high-power zombies, increase this value, other than that, decrease it - I'd suggest going with 15-30
+
+Monster Speed/Resilience [1\% to 1000\%] -> This multiplies both the internal speed and HP that each monster is spawned with. A lower number means the monsters are gonna be slower and take less hits to kill, while a higher number will make them tougher and faster respectively.
+
+Default region type [default] -> This feature is not yet implemented, but planned to be able to switch to different regions to play in, like deserts.
+
+Initial Time [0 to 23] -> this sets the time of the current world upon spawn, 0 meaning midnight, 12 midday etc.
+
+Initial Season [Spring, Summer, Autumn, Winter] -> Sets the season the world is currently in when spawning a new character. Note that the season will have severe impacts on the availability of food as well as the temperature outside. Summer is easy to start out in, as clothing isn't as important and food is readily available. I'd still suggest using spring out of nostalgia reasons, they got a bit harsher.
+
+Season Length [14-91] -> Amount of days required till a season switches from one to the next. I'd say go with 30-45
+
+Construction Scaling [0 to 1000] -> Scales the speed in percent that each construction would take. 50 doubles it, 200 halves the speed. 0 scales the time proportionally to your season length, which can cause you to construct very slowly.
+Eternal Season [false/true] -> When this setting is enabled, the seasons will not cycle and you will be trapped in the starting season selected.
+
+Wander Spawns [false/true] -> This setting allows for a sound based repositioning of zombies from one location to another by taking monsters from a pool of nearby structures and teleporting them relatively close to the sound of noise, if the noise breaks a threshold. Considering that worlds are technically endless, this is just a fancy description to enable dynamic spawn. Your first couple of games should potentially be played without this feature, unless you are daring.
+
+Classic Zombies [false/true] -> this setting will enable/disable the spawning of more exotic zombies and wildlife and keep the game to a certain degree of realism, as realistic as a zombie apocalypse can be. Overmap specials that are dedicated to those monsters will also be disabled by this setting.
+
+Surrounded Start [false/true] -> when enabled, upon spawn you will have several zombies close by. Beware that this will also spawn in zombies from mods, if you have them (especially deadly with Cata++ and PK's mod)
+
+Static/Random NPCs [false/true] -> When enabled, will allow for structures that contain them to be spawned in with static NPCs, while Random NPCs will be randomly spawned at the edge of your reality bubble during your gameplay.
+
+Mutation by Radiation [false/true] -> when disabled, this will block radiation from causing you to randomly mutate, given certain thresholds.
+
+Experimental Z-Levels [false/true] -> when enabled, will cause the game to run slower, depending on surrounding entities, but allows for enemies and allies to traverse between Z levels in a realistic manner, as sound, scent and vision will travel between those Z levels where appropriate.
+
+Character Point Pools [Any, Multipool, No freeform] -> sets the selectable character point pools when starting a new character in the appropriate world. Any allows for any selection, Multipool restricts you to using Multipool only, No Freeform disables that option.
+
+With all of those settings in mind, what would a newcomer to the game chose to have a relatively balanced game?
+
+Not only is this question difficult to answer, as every person has different preferences, but every person also enjoys a different challenge. Some just want to worry about basic survival, some want to struggle in combat.
+
+I'd suggest you don't tweak any of the Zombie modifying values (Speed/resilience/Classic/Surrounded) until you deem it necessary - while this makes for a more challenging game overall in terms of enemy variety, you will miss a lot of the games' content. Wander Spawns should either be set to on or off according to taste - I personally enjoy the extra challenge of having to deal with noise and hordes roaming around the map, though it makes clearing a city significantly more difficult. As stated earlier, I highly advise against using wander spawns if you are a newcomer to this game, as the amount of zombies that will be in towns can quite easily overwhelm you. Same goes for experimental Z-Levels, having to be careful with sound and light, even across Z-Levels makes for a great challenge on managing your survival as you can't just hide out in a basement, go to sleep in order to heal up damage you have taken, go back out again and attack. Hordes that are chasing you will actively chase after you over multiple levels, which means you can potentially trap yourself by thinking a basement or upstairs on a building is safe.
+
+Settings you can safely modify would be: Zombie Spawn Rate (set it to 1.00 or lower if deemed necessary), carrion spawn rate (either disable it by setting it to 0 or leave it at 100\%) Item spawn rate I'd actually suggest bumping up to 1.25 or 1.5, while this makes the early game substantially easier to deal with, limitless frustration makes the game experience less enjoyable to begin with. Reducing this setting at a certain skill level, to not get handed everything right from the get-go makes for great runs later down the line. Static NPCs should be enabled, as it will populate some of the buildings you come across, otherwise those will be completely empty to begin with, namely the Refugee Center.
+
+I'd suggest against playing with random NPCs, as they are currently horrendously unbalanced and can spawn with extremely high skills and if that NPC is considering you to be a threat, he might decide to put you out of your misery. If you want an experience like DayZ, except fun, go for it and bump up the NPC spawn rate to 0.25 first, increasing it as you see fit, but don't come crying that I didn't warn you.
+Season length should be around 30, maybe even lower so you can see the effects of the appropriate seasons to the surrounding world. As this changes ambient temperature as well as what you can forage in the wilds, quicker times means more dynamics. While you will enter difficult seasons earlier, they will also pass earlier, requiring a lower stockpile.
+
+Nevertheless I feel that it should be addressed that all of these settings are my own personal preferences - beware that some of these settings can easily make your game harder or easier, often to a dramatic degree.
+
+\section{Mods}
+
+\textit{(Information provided by Shard from the C:DDA Discord)}
+
+Mods for CDDA are structured as a folder that goes in cdda/data/mods, with the first level of the folder including a file called modinfo.json - besides this they can contain other files either directly or within subfolders.  Typically mods are downloaded as a zipped file either containing loose files or a folder for the mod with the files contained inside, while sometimes (typically from github) you might get something that ends up being similar to 'mymod-master/mymod/modinfo.json' at which point you need to move the mymod folder to data/mods instead of the mymod-master, as otherwise your modinfo.json would not be one layer of folders below mods/ as it should be.
+
+Some mods require LUA support in your game.  If you downloaded an already compiled version, this is the default, and you do not have to do anything.  If you compile on your own, you need to follow the instructions for adding LUA support, as it is not default.
+
+Most mods can be safely added or removed midgame by editing saves/worldname/mods.json and adding/removing the mod's identifier from the modinfo.json for that mod (vehicle additions pack is 'blazemod' for example, so it isn't always what you would guess)  Mods that cannot be safely added to saves: Anything that adds NPC factions.  Mods that can be tricky to remove: Anything that adds terrain (like grass/dirt/concrete) because that leaves literal holes in the world, and anything that adds new building types (spam of errors when near them, so you have to explore a new area after removing them and prune your save file to remove the old space)
+
+For the mods that are unsafe to add due to factions being added, you can create a new game with those mods and copy the specific missing faction data from master.gsav in the new game into your old game, and then add the mod to the old save.  Be sure to back up your save file before doing so, as being unsuccessful at trying to add a mod that adds factions can corrupt your save.
+
+\section{Suggested Mods for a Game}
+
+\textit{(To find downloads for the newest versions, check the C:DDA Discord)}
+
+Many people have different wishes in what they'd like to have from a mod, some just like extra content, some like challenges, some just wanna breeze through the game. Nevertheless, here's a small list of Mods that I feel are well worth the addition to your game:
+
+\textbf{Arcana} - provides a bunch magical related areas and items, for those that wanna see more of an occult version of cataclysm.
+
+\textbf{Artyoms' Gun Emporium} - Reloaded, Icecoons Arsenal, DeadLeaves' Fictional Guns, Craftable Guns, Extended Realistic Guns - All things guns, any of the gunmods you find on the list should be added for the extra variety, even though this'll spawn so many ammo types and weapons you'll sometimes struggle to find the appropriate ammo. If the base game is lacking a firearm, you might come across something similar just by playing with these mods installed.
+
+\textbf{Cars to Wrecks} - (recommended for intermediate players) -
+(careful, this mod is known to behave in wonky ways) - this will cause many of the vehicles you come across in towns, roads, buildings etc. to be wrecked beyond usage, so you have to scavenge for parts that you wish to use, building vehicles from scratch, unless you get lucky. This will make you value your deathmobile even more, as spare parts are gonna be a rarity unless you make them yourself.
+
+\textbf{Cata++} - Adding not just a whole lot of enemies, but also hefty items, it's worthwhile to pick up just to engage some enemies that'll gladly kill you on long range, while packing some heavy rewards, like armor and mid to late game weapons.
+
+\textbf{PK's Rebalancing} - The big daddy of mods - adding not only a whole lot of new enemies, new items and new effects but also increasing the difficulty by a notch or twelve? Weather effects are harsher, poison more crippling and enemies radiate you when struck in combat, slowly at least. For those that wish for more of a challenge while playing, this is the mod for you. To compensate for it though, you get some nice quality of life effects, lots of extra items and many new locales to explore.
+
+\textbf{Medieval Weapons} - for the knights in shabby armor among you, this is a mod that is more than welcome, as it adds more medieval weapons as well as a medieval swordsmanship style.
+
+\textbf{Folding Parts pack, Tanks and other Vehicles, Vehicle addition pack, boats} - All things road-warrior style. These mods have many more vehicles to spawn on the overworld, and more vehicles means more variety and more fun when mowing down Z's on the road. The folding vehicle addition is in itself great, allowing you to craft foldable parts and therefore foldable cars, while tanks' well, they are tanks!
+
+\textbf{Location adding Mods} - Beta National Guard Camp, Fuji's more Buildings, More Buildings, More City Locations, More Locations, Oa's additional Buildings Mod, Tall Buildings and more - To spice up your variety in city exploration, I highly recommend these mods, as otherwise your cities are gonna be a bit bleak in terms of buildings, for the most part. While the base game has certainly added more buildings to cities, having even more of them is definitely also very handy.
