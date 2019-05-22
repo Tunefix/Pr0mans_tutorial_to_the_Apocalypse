@@ -10,47 +10,48 @@ How do we set up our world though? What do the different numbers and scales do e
 
 \section{The Creation}
 
-World end Handling - Keep/Reset/Delete -> Basically allows you to tell the game what happens to the world once you die. I personally prefer to play using the Reset settings, as starting in a location that has been looted by a previous character can be utterly frustrating.
+\textbf{World end Handling} - Keep/Reset/Delete\\Basically allows you to tell the game what happens to the world once you die. I personally prefer to play using the Reset settings, as starting in a location that has been looted by a previous character can be utterly frustrating.
 
-Size of Cities - [0 to 16] -> this setting sets the scaling factors to city generation. Remember that even with very small or very big numbers, size of cities can vary drastically. The base value of 8 (increased from 4 as of version 8400)  generates town of sizes ranging from 10 houses up to big cities with over 100 buildings. Generally ranging somewhere from 40-70 based on observation. I'd go with a 10.
+\textbf{Size of Cities} - [0 to 16]\\This setting sets the scaling factors to city generation. Remember that even with very small or very big numbers, size of cities can vary drastically. The base value of 8 (increased from 4 as of version 8400)  generates town of sizes ranging from 10 houses up to big cities with over 100 buildings. Generally ranging somewhere from 40-70 based on observation. I'd go with a 10.
 
-City Spacing - [0 to 8] -> This setting in turn is an indicator for how close cities are going to be generated to each other. Smaller numbers mean cities are closer together, while a spacing of 6+ makes for day long travels, even with a vehicle. Go with 4 for the best results for the first world.
+\textbf{City Spacing} - [0 to 8]\\This setting in turn is an indicator for how close cities are going to be generated to each other. Smaller numbers mean cities are closer together, while a spacing of 6+ makes for day long travels, even with a vehicle. Go with 4 for the best results for the first world.
 
-Spawn Rate Scaling Factor [0.00 to 50.00] -> Sets the amount of monster spawning, a value of 0 would deactivate spawning all together, while a value of 2 would effectively double the amount of monsters. Small changes can already have a huge impact on monster density inside a town, especially when paired with Wanders Spawns: On.
+\textbf{Spawn Rate Scaling Factor} - [0.00 to 50.00]\\Sets the amount of monster spawning, a value of 0 would deactivate spawning all together, while a value of 2 would effectively double the amount of monsters. Small changes can already have a huge impact on monster density inside a town, especially when paired with Wanders Spawns: On.
 
-Carrion Spawn Rate scaling factor [0\% to 1000\%] -> Sets the value at how often (and therefore how quick) critters spawn out of rotten edibles, a value of 0\% disables this mechanic all together.
+\textbf{Carrion Spawn Rate scaling factor} - [0\% to 1000\%]\\Sets the value at how often (and therefore how quick) critters spawn out of rotten edibles, a value of 0\% disables this mechanic all together.
 
-Item Spawn scaling factor [0.01 to 10.00] -> Sets the amount of items found in certain locations. This does not impact monster drop tables and is only meant to influence how many items are spawned in any given spot.
+\textbf{Item Spawn scaling factor} - [0.01 to 10.00]\\Sets the amount of items found in certain locations. This does not impact monster drop tables and is only meant to influence how many items are spawned in any given spot.
 NPC Spawn Rate scaling factor [0 to 100.00] -> sets the density and thereby the chance of an NPC spawning in on the edge of your reality bubble (more on that in chapter 5.3.10). This does only influence randomly spawned in NPCs, not static NPCs. If you wish to encounter NPCs on a regular basis, set this value to 1 - 1.5, for the odd encounter maybe 0.5
 
-Monster Evolution scaling factor [0.00 to 100] -> sets the time required for a monster to spawn 1 evolution category higher than it normally would have. 0 disables evolution of monsters, a higher number means more days need to pass for evolution to occur. If you have trouble with high-power zombies, increase this value, other than that, decrease it - I'd suggest going with 15-30
+\textbf{Monster Evolution scaling factor} - [0.00 to 100]\\Sets the time required for a monster to spawn 1 evolution category higher than it normally would have. 0 disables evolution of monsters, a higher number means more days need to pass for evolution to occur. If you have trouble with high-power zombies, increase this value, other than that, decrease it - I'd suggest going with 15-30
 
-Monster Speed/Resilience [1\% to 1000\%] -> This multiplies both the internal speed and HP that each monster is spawned with. A lower number means the monsters are gonna be slower and take less hits to kill, while a higher number will make them tougher and faster respectively.
+\textbf{Monster Speed/Resilience} - [1\% to 1000\%]\\This multiplies both the internal speed and HP that each monster is spawned with. A lower number means the monsters are gonna be slower and take less hits to kill, while a higher number will make them tougher and faster respectively.
 
-Default region type [default] -> This feature is not yet implemented, but planned to be able to switch to different regions to play in, like deserts.
+\textbf{Default region type} - [default]\\This feature is not yet implemented, but planned to be able to switch to different regions to play in, like deserts.
 
-Initial Time [0 to 23] -> this sets the time of the current world upon spawn, 0 meaning midnight, 12 midday etc.
+\textbf{Initial Time} - [0 to 23]\\This sets the time of the current world upon spawn, 0 meaning midnight, 12 midday etc.
 
-Initial Season [Spring, Summer, Autumn, Winter] -> Sets the season the world is currently in when spawning a new character. Note that the season will have severe impacts on the availability of food as well as the temperature outside. Summer is easy to start out in, as clothing isn't as important and food is readily available. I'd still suggest using spring out of nostalgia reasons, they got a bit harsher.
+\textbf{Initial Season} - [Spring, Summer, Autumn, Winter]\\Sets the season the world is currently in when spawning a new character. Note that the season will have severe impacts on the availability of food as well as the temperature outside. Summer is easy to start out in, as clothing isn't as important and food is readily available. I'd still suggest using spring out of nostalgia reasons, they got a bit harsher.
 
-Season Length [14-91] -> Amount of days required till a season switches from one to the next. I'd say go with 30-45
+\textbf{Season Length} - [14-91]\\Amount of days required till a season switches from one to the next. I'd say go with 30-45
 
-Construction Scaling [0 to 1000] -> Scales the speed in percent that each construction would take. 50 doubles it, 200 halves the speed. 0 scales the time proportionally to your season length, which can cause you to construct very slowly.
-Eternal Season [false/true] -> When this setting is enabled, the seasons will not cycle and you will be trapped in the starting season selected.
+\textbf{Construction Scaling} - [0 to 1000]\\Scales the speed in percent that each construction would take. 50 doubles it, 200 halves the speed. 0 scales the time proportionally to your season length, which can cause you to construct very slowly.
 
-Wander Spawns [false/true] -> This setting allows for a sound based repositioning of zombies from one location to another by taking monsters from a pool of nearby structures and teleporting them relatively close to the sound of noise, if the noise breaks a threshold. Considering that worlds are technically endless, this is just a fancy description to enable dynamic spawn. Your first couple of games should potentially be played without this feature, unless you are daring.
+\textbf{Eternal Season} - [false/true]\\When this setting is enabled, the seasons will not cycle and you will be trapped in the starting season selected.
 
-Classic Zombies [false/true] -> this setting will enable/disable the spawning of more exotic zombies and wildlife and keep the game to a certain degree of realism, as realistic as a zombie apocalypse can be. Overmap specials that are dedicated to those monsters will also be disabled by this setting.
+\textbf{Wander Spawns} - [false/true]\\This setting allows for a sound based repositioning of zombies from one location to another by taking monsters from a pool of nearby structures and teleporting them relatively close to the sound of noise, if the noise breaks a threshold. Considering that worlds are technically endless, this is just a fancy description to enable dynamic spawn. Your first couple of games should potentially be played without this feature, unless you are daring.
 
-Surrounded Start [false/true] -> when enabled, upon spawn you will have several zombies close by. Beware that this will also spawn in zombies from mods, if you have them (especially deadly with Cata++ and PK's mod)
+\textbf{Classic Zombies} - [false/true]\\This setting will enable/disable the spawning of more exotic zombies and wildlife and keep the game to a certain degree of realism, as realistic as a zombie apocalypse can be. Overmap specials that are dedicated to those monsters will also be disabled by this setting.
 
-Static/Random NPCs [false/true] -> When enabled, will allow for structures that contain them to be spawned in with static NPCs, while Random NPCs will be randomly spawned at the edge of your reality bubble during your gameplay.
+\textbf{Surrounded Start} - [false/true]\\When enabled, upon spawn you will have several zombies close by. Beware that this will also spawn in zombies from mods, if you have them (especially deadly with Cata++ and PK's mod)
 
-Mutation by Radiation [false/true] -> when disabled, this will block radiation from causing you to randomly mutate, given certain thresholds.
+\textbf{Static/Random NPCs} - [false/true]\\When enabled, will allow for structures that contain them to be spawned in with static NPCs, while Random NPCs will be randomly spawned at the edge of your reality bubble during your gameplay.
 
-Experimental Z-Levels [false/true] -> when enabled, will cause the game to run slower, depending on surrounding entities, but allows for enemies and allies to traverse between Z levels in a realistic manner, as sound, scent and vision will travel between those Z levels where appropriate.
+\textbf{Mutation by Radiation} - [false/true]\\When disabled, this will block radiation from causing you to randomly mutate, given certain thresholds.
 
-Character Point Pools [Any, Multipool, No freeform] -> sets the selectable character point pools when starting a new character in the appropriate world. Any allows for any selection, Multipool restricts you to using Multipool only, No Freeform disables that option.
+\textbf{Experimental Z-Levels} - [false/true]\\When enabled, will cause the game to run slower, depending on surrounding entities, but allows for enemies and allies to traverse between Z levels in a realistic manner, as sound, scent and vision will travel between those Z levels where appropriate.
+
+\textbf{Character Point Pools} - [Any, Multipool, No freeform]\\Sets the selectable character point pools when starting a new character in the appropriate world. Any allows for any selection, Multipool restricts you to using Multipool only, No Freeform disables that option.
 
 With all of those settings in mind, what would a newcomer to the game chose to have a relatively balanced game?
 
